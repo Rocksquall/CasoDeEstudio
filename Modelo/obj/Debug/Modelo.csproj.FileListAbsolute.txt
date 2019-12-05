@@ -1,0 +1,12 @@
+D:\Alba\Fase 5\.Net\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.dll.config
+D:\Alba\Fase 5\.Net\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.dll
+D:\Alba\Fase 5\.Net\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.pdb
+D:\Alba\Fase 5\.Net\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+D:\Alba\Fase 5\.Net\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.dll
+D:\Alba\Fase 5\.Net\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.dll
+C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.dll
+C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.pdb

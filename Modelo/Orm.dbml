@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="casodeestudio" Class="OrmDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A7C28SI\SQLEXPRESS;Initial Catalog=casodeestudio;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="casodeestudioConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="casodeestudio.centro_medico" Member="centro_medico">
+    <Type Name="centro_medico">
+      <Column Name="idcentro_medico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_centro" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_centro" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="foto_centro" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="hora_inicio" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="hora_fin" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono_centro" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="visita_centro" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="nivel_atencion_idnivel_atencion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="especialidad_idespecialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eps_ideps" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="centro_medico_cita" Member="cita" ThisKey="idcentro_medico" OtherKey="centro_medico_idcentro_medico" Type="cita" />
+      <Association Name="centro_medico_usuario_centro_medico" Member="usuario_centro_medico" ThisKey="idcentro_medico" OtherKey="centro_medico_idcentro_medico" Type="usuario_centro_medico" />
+      <Association Name="eps_centro_medico" Member="eps" ThisKey="eps_ideps" OtherKey="ideps" Type="eps" IsForeignKey="true" />
+      <Association Name="especialidad_centro_medico" Member="especialidad" ThisKey="especialidad_idespecialidad" OtherKey="idespecialidad" Type="especialidad" IsForeignKey="true" />
+      <Association Name="nivel_atencion_centro_medico" Member="nivel_atencion" ThisKey="nivel_atencion_idnivel_atencion" OtherKey="idnivel_atencion" Type="nivel_atencion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.cita" Member="cita">
+    <Type Name="cita">
+      <Column Name="idcita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fecha_cita" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="centro_medico_idcentro_medico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="centro_medico_cita" Member="centro_medico" ThisKey="centro_medico_idcentro_medico" OtherKey="idcentro_medico" Type="centro_medico" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.eps" Member="eps">
+    <Type Name="eps">
+      <Column Name="ideps" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nit_eps" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_eps" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_eps" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono_eps" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="clave_eps" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="eps_centro_medico" Member="centro_medico" ThisKey="ideps" OtherKey="eps_ideps" Type="centro_medico" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.especialidad" Member="especialidad">
+    <Type Name="especialidad">
+      <Column Name="idespecialidad" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="especialidad_eps" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="especialidad_centro_medico" Member="centro_medico" ThisKey="idespecialidad" OtherKey="especialidad_idespecialidad" Type="centro_medico" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.nivel_atencion" Member="nivel_atencion">
+    <Type Name="nivel_atencion">
+      <Column Name="idnivel_atencion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="atencion" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="nivel_atencion_centro_medico" Member="centro_medico" ThisKey="idnivel_atencion" OtherKey="nivel_atencion_idnivel_atencion" Type="centro_medico" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.permisos" Member="permisos">
+    <Type Name="permisos">
+      <Column Name="idpermisos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="permisos" Member="permisos1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="icono" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="permisos_rol_permisos" Member="rol_permisos" ThisKey="idpermisos" OtherKey="permisos_idpermisos" Type="rol_permisos" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.rol" Member="rol">
+    <Type Name="rol">
+      <Column Name="idrol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rol" Member="rol1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="rol_rol_permisos" Member="rol_permisos" ThisKey="idrol" OtherKey="rol_idrol" Type="rol_permisos" />
+      <Association Name="rol_usuario" Member="usuario" ThisKey="idrol" OtherKey="rol_idrol" Type="usuario" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.rol_permisos" Member="rol_permisos">
+    <Type Name="rol_permisos">
+      <Column Name="rol_permisos" Member="rol_permisos1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rol_idrol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="permisos_idpermisos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="permisos_rol_permisos" Member="permisos" ThisKey="permisos_idpermisos" OtherKey="idpermisos" Type="permisos" IsForeignKey="true" />
+      <Association Name="rol_rol_permisos" Member="rol" ThisKey="rol_idrol" OtherKey="idrol" Type="rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.usuario" Member="usuario">
+    <Type Name="usuario">
+      <Column Name="idusuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="cedula_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="correo_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="clave_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="rol_idrol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="usuario_usuario_centro_medico" Member="usuario_centro_medico" ThisKey="idusuario" OtherKey="usuario_idusuario" Type="usuario_centro_medico" />
+      <Association Name="rol_usuario" Member="rol" ThisKey="rol_idrol" OtherKey="idrol" Type="rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="casodeestudio.usuario_centro_medico" Member="usuario_centro_medico">
+    <Type Name="usuario_centro_medico">
+      <Column Name="idusuario_centro_medico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="calificacion" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="centro_medico_idcentro_medico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_idusuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_rol_idrol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="centro_medico_usuario_centro_medico" Member="centro_medico" ThisKey="centro_medico_idcentro_medico" OtherKey="idcentro_medico" Type="centro_medico" IsForeignKey="true" />
+      <Association Name="usuario_usuario_centro_medico" Member="usuario" ThisKey="usuario_idusuario" OtherKey="idusuario" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

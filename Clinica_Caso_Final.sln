@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinica_Caso_Final", "Clinica_Caso_Final\Clinica_Caso_Final.csproj", "{0D81F382-B583-4876-B902-9171E58BBFB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{F88B8F58-66B5-470B-A4CD-6537FD5688FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D81F382-B583-4876-B902-9171E58BBFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D81F382-B583-4876-B902-9171E58BBFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D81F382-B583-4876-B902-9171E58BBFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D81F382-B583-4876-B902-9171E58BBFB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88B8F58-66B5-470B-A4CD-6537FD5688FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88B8F58-66B5-470B-A4CD-6537FD5688FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88B8F58-66B5-470B-A4CD-6537FD5688FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88B8F58-66B5-470B-A4CD-6537FD5688FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A87E15A9-76EA-4966-B348-2A030A71F425}
+	EndGlobalSection
+EndGlobal
