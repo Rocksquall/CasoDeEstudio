@@ -1480,7 +1480,7 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="rol", Storage="_rol1", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rol1", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
 		public string rol1
 		{
 			get

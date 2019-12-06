@@ -10,9 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Login ID="iniciarSesion" runat="server" OnAuthenticate="iniciarSesion_Authenticate"></asp:Login>
+            <asp:Login ID="iniciarSesion" runat="server" OnAuthenticate="iniciarSesion_Authenticate" TitleText="Iniciar Sesión" UserNameLabelText="Documento Usuario"></asp:Login>
         </div>
         <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-    </form>
+        <br />
+        <a href="LoginEPS.aspx">¿Eres EPS?</a>
+        <br />
+        <a href="LoginAdmin.aspx">¿Eres Administrador?</a></form>
 </body>
 </html>

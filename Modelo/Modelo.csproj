@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsListas.cs" />
+    <Compile Include="ClsLogin.cs" />
     <Compile Include="ClsRol.cs" />
     <Compile Include="ClsUsuario.cs" />
     <Compile Include="Orm.designer.cs">
@@ -77,9 +78,6 @@
     <None Include="Orm.dbml.layout">
       <DependentUpon>Orm.dbml</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="NewFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

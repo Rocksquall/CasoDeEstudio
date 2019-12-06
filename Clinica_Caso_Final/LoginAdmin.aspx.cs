@@ -12,12 +12,12 @@ namespace Clinica_Caso_Final
     {
 
 
-        protected void iniciarSesion_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void IniciarSesion3_Authenticate(object sender, AuthenticateEventArgs e)
         {
             usuario usuarioDto = new usuario();
             ClsLogin usuarioDao = new ClsLogin();
 
-            usuarioDto = usuarioDao.login(iniciarSesion.UserName, iniciarSesion.Password);
+            usuarioDto = usuarioDao.loginAdmin(iniciarSesion.UserName, iniciarSesion.Password);
             if (usuarioDto != null)
             {
 
@@ -28,18 +28,10 @@ namespace Clinica_Caso_Final
                 {
                     Response.Redirect("indexAdministrador.aspx", false);
                 }
-                if (usuarioDto.rol_idrol == 2)
-                {
-                    Response.Redirect("indexEPS.aspx", false);
-                }
-                if (usuarioDto.rol_idrol == 3)
-                {
-                    Response.Redirect("indexUsuario.aspx", false);
-                }
             }
             else
             {
-                lblMensaje.Text = "Usuario o contraseña incorrecta";
+                lblMensajeAdmin.Text = "Usuario o contraseña incorrecta";
             }
 
         }

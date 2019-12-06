@@ -13,9 +13,9 @@ namespace Modelo
         public string registrarUsuario(usuario usua)
         {
             string mensaje;
-            
+
             OrmDataContext baseDeDatos = new OrmDataContext();
-            
+
 
             try
             {
@@ -25,8 +25,8 @@ namespace Modelo
             }
             catch (Exception ex)
             {
-                mensaje = "Error al registrar "+ ex.Message;
-                
+                mensaje = "Error al registrar " + ex.Message;
+
             }
 
             return mensaje;
@@ -42,7 +42,7 @@ namespace Modelo
 
             try
             {
-                var usuarioActualizar = (from us in baseDeDatos.usuario where us.idusuario== usua.idusuario select us).FirstOrDefault();
+                var usuarioActualizar = (from us in baseDeDatos.usuario where us.idusuario == usua.idusuario select us).FirstOrDefault();
                 if (usuarioActualizar != null)
                 {
                     usuarioActualizar.nombre_u = usua.nombre_u;
@@ -58,7 +58,7 @@ namespace Modelo
                     mensaje = "Usuario No existe";
                 }
 
-                
+
             }
             catch (Exception ex)
             {
@@ -102,7 +102,7 @@ namespace Modelo
 
         }
 
-        public void  listaUsuarios(ref GridView gdvTablaUsuario)
+        public void listaUsuarios(ref GridView gdvTablaUsuario)
         {
             OrmDataContext baseDeDatos = new OrmDataContext();
             gdvTablaUsuario.DataSource = (from use in baseDeDatos.usuario select use).ToList();
@@ -116,15 +116,6 @@ namespace Modelo
 
             return usuario;
         }
-
-        public usuario login(string numDoc, string clave)
-        {
-            OrmDataContext baseDeDatos = new OrmDataContext();
-            var login = (from usa in baseDeDatos.usuario where usa.cedula_u == numDoc && usa.clave_u == clave select usa).FirstOrDefault();
-            return login;
-
-        }
-
     }
 
 

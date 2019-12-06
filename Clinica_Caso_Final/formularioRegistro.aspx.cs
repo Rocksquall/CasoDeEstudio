@@ -12,6 +12,8 @@ namespace Clinica_Caso_Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            usuario baseDeDatos = new usuario();
+   
             if (!IsPostBack)
             {
                 ClsListas lista = new ClsListas();
@@ -31,9 +33,9 @@ namespace Clinica_Caso_Final
             usuarioDto.correo_u = txtCorreo.Text;
             usuarioDto.telefono_u = txtTelefono.Text;
             usuarioDto.clave_u = txtClave.Text;
-            usuarioDto.rol_idrol= int.Parse(ddlRol.SelectedValue.ToString()); ;
+            usuarioDto.rol_idrol = int.Parse(ddlRol.SelectedValue.ToString()); ;
             usuarioDao.registrarUsuario(usuarioDto);
         }
 
-        }
     }
+}

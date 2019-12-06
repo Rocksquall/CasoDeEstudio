@@ -19,6 +19,15 @@ namespace Modelo
             ddlListaRol.DataBind();
             
         }
+        public void listaNivelAtencion(ref DropDownList ddlNivelAtencion)
+        {
+
+            ddlNivelAtencion.DataSource = (from at in baseDeDatos.nivel_atencion select at).ToList();
+            ddlNivelAtencion.DataValueField = "idnivel_atencion";
+            ddlNivelAtencion.DataTextField = "atencion";
+            ddlNivelAtencion.DataBind();
+
+        }
 
     }
 }

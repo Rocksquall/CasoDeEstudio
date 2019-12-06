@@ -72,6 +72,8 @@
     <Content Include="indexAdminsitrador.aspx" />
     <Content Include="indexEPS.aspx" />
     <Content Include="indexUsuario.aspx" />
+    <Content Include="LoginAdmin.aspx" />
+    <Content Include="LoginEPS.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="resource\img\editar.png" />
     <Content Include="resource\img\eliminar.png" />
@@ -111,6 +113,20 @@
     </Compile>
     <Compile Include="indexUsuario.aspx.designer.cs">
       <DependentUpon>indexUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.designer.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginEPS.aspx.cs">
+      <DependentUpon>LoginEPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginEPS.aspx.designer.cs">
+      <DependentUpon>LoginEPS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
