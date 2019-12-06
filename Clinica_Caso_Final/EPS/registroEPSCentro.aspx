@@ -1,15 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="indexAdministrador.aspx.cs" Inherits="Clinica_Caso_Final.indexAdministrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registroEPSCentro.aspx.cs" Inherits="Clinica_Caso_Final.indexUsuario" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Index Usuario</title>
 </head>
 <body>
-    <form id="formAdministrador" runat="server">
-        <div>
+    <form id="formRegistroEps" runat="server">
+        <asp:Panel ID="Panel1" runat="server">
             <div>
                 <div>
                     <div>
@@ -49,7 +49,7 @@
                         <asp:DropDownList ID="ddlNivelAtencion" runat="server">
                         </asp:DropDownList>
                     </div>
-                   <div>
+                    <div>
                         <asp:Label ID="lblEspecialidad" runat="server" Text="Especialidad: "></asp:Label>
                         <asp:DropDownList ID="ddlEspecialidad" runat="server">
                         </asp:DropDownList>
@@ -65,7 +65,7 @@
                 <br />
                 <br />
             </div>
-        </div>
+        </asp:Panel>
     </form>
 </body>
 </html>

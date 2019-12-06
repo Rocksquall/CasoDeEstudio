@@ -67,24 +67,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="crudUsuario.aspx" />
+    <Content Include="EPS\actualizarEpsCentro.aspx" />
+    <Content Include="EPS\indexEps.aspx" />
+    <Content Include="EPS\RegistroEPSEspecialidadCentro.aspx" />
+    <Content Include="Usuario\crudUsuario.aspx" />
     <Content Include="formularioRegistro.aspx" />
-    <Content Include="indexAdministrador.aspx" />
-    <Content Include="indexEPS.aspx" />
-    <Content Include="indexUsuario.aspx" />
-    <Content Include="LoginAdmin.aspx" />
-    <Content Include="LoginEPS.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Administrador\indexAdministrador.aspx" />
+    <Content Include="EPS\registroEPSCentro.aspx" />
+    <Content Include="Usuario\indexUsuario.aspx" />
+    <Content Include="EPS\loginEPS.aspx" />
+    <Content Include="Usuario\Login.aspx" />
     <Content Include="resource\img\editar.png" />
     <Content Include="resource\img\eliminar.png" />
+    <Content Include="Administrador\SeleccionAdministrador.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crudUsuario.aspx.cs">
+    <Compile Include="EPS\actualizarEpsCentro.aspx.cs">
+      <DependentUpon>actualizarEpsCentro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPS\actualizarEpsCentro.aspx.designer.cs">
+      <DependentUpon>actualizarEpsCentro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EPS\indexEps.aspx.cs">
+      <DependentUpon>indexEps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPS\indexEps.aspx.designer.cs">
+      <DependentUpon>indexEps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EPS\RegistroEPSEspecialidadCentro.aspx.cs">
+      <DependentUpon>RegistroEPSEspecialidadCentro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPS\RegistroEPSEspecialidadCentro.aspx.designer.cs">
+      <DependentUpon>RegistroEPSEspecialidadCentro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\crudUsuario.aspx.cs">
       <DependentUpon>crudUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="crudUsuario.aspx.designer.cs">
+    <Compile Include="Usuario\crudUsuario.aspx.designer.cs">
       <DependentUpon>crudUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="formularioRegistro.aspx.cs">
@@ -94,49 +118,49 @@
     <Compile Include="formularioRegistro.aspx.designer.cs">
       <DependentUpon>formularioRegistro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="indexAdministrador.aspx.cs">
+    <Compile Include="Administrador\indexAdministrador.aspx.cs">
       <DependentUpon>indexAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="indexAdministrador.aspx.designer.cs">
+    <Compile Include="Administrador\indexAdministrador.aspx.designer.cs">
       <DependentUpon>indexAdministrador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="indexEPS.aspx.cs">
-      <DependentUpon>indexEPS.aspx</DependentUpon>
+    <Compile Include="EPS\registroEPSCentro.aspx.cs">
+      <DependentUpon>registroEPSCentro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="indexEPS.aspx.designer.cs">
-      <DependentUpon>indexEPS.aspx</DependentUpon>
+    <Compile Include="EPS\registroEPSCentro.aspx.designer.cs">
+      <DependentUpon>registroEPSCentro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="indexUsuario.aspx.cs">
+    <Compile Include="Usuario\indexUsuario.aspx.cs">
       <DependentUpon>indexUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="indexUsuario.aspx.designer.cs">
+    <Compile Include="Usuario\indexUsuario.aspx.designer.cs">
       <DependentUpon>indexUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginAdmin.aspx.cs">
-      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    <Compile Include="EPS\loginEPS.aspx.cs">
+      <DependentUpon>loginEPS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginAdmin.aspx.designer.cs">
-      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    <Compile Include="EPS\loginEPS.aspx.designer.cs">
+      <DependentUpon>loginEPS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginEPS.aspx.cs">
-      <DependentUpon>LoginEPS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginEPS.aspx.designer.cs">
-      <DependentUpon>LoginEPS.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Usuario\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Usuario\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Administrador\SeleccionAdministrador.aspx.cs">
+      <DependentUpon>SeleccionAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\SeleccionAdministrador.aspx.designer.cs">
+      <DependentUpon>SeleccionAdministrador.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -153,6 +177,7 @@
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

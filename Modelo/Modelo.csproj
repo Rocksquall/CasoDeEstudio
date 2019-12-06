@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsCentroMedico.cs" />
+    <Compile Include="ClsEps.cs" />
     <Compile Include="ClsListas.cs" />
     <Compile Include="ClsLogin.cs" />
     <Compile Include="ClsRol.cs" />
@@ -67,6 +68,9 @@
       <LastGenOutput>Orm.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Orm.dbml.layout">
+      <DependentUpon>Orm.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,11 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Orm.dbml.layout">
-      <DependentUpon>Orm.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
