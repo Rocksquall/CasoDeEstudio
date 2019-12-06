@@ -7,7 +7,7 @@ namespace Clinica_Caso_Final
     {
 
 
-        protected void iniciarSesion_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void iniciarSesion_Row(object sender, AuthenticateEventArgs e)
         {
             usuario usuarioDto = new usuario();
 #pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'ClsLogin' no se encontró (¿falta una directiva using o una referencia de ensamblado?)

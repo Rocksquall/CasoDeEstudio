@@ -61,7 +61,9 @@
                     </div>
                 </div>
                 <br />
-                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Registrar Centro medico" OnClick="Button1_Click" />
+                <br />
+                <br />
             </div>
         </div>
     </form>
