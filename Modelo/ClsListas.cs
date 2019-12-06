@@ -6,7 +6,7 @@ namespace Modelo
     public class ClsListas
     {
         OrmDataContext baseDeDatos = new OrmDataContext();
-        public void listaRol(ref DropDownList ddlListaRol)
+        public void ListaRol(ref DropDownList ddlListaRol)
         {
 
             ddlListaRol.DataSource = (from ro in baseDeDatos.rol select ro).ToList();
@@ -15,7 +15,7 @@ namespace Modelo
             ddlListaRol.DataBind();
 
         }
-        public void listaNivelAtencion(ref DropDownList ddlNivelAtencion)
+        public void ListaNivelAtencion(ref DropDownList ddlNivelAtencion)
         {
 
             ddlNivelAtencion.DataSource = (from at in baseDeDatos.nivel_atencion select at).ToList();
@@ -24,7 +24,7 @@ namespace Modelo
             ddlNivelAtencion.DataBind();
 
         }
-        public void listaEspecialidad(ref DropDownList ddlEspecialidad)
+        public void ListaEspecialidad(ref DropDownList ddlEspecialidad)
         {
 
             ddlEspecialidad.DataSource = (from at in baseDeDatos.especialidad select at).ToList();
@@ -33,7 +33,7 @@ namespace Modelo
             ddlEspecialidad.DataBind();
 
         }
-        public void listaEps(ref DropDownList ddlEps)
+        public void ListaEps(ref DropDownList ddlEps)
         {
 
             ddlEps.DataSource = (from at in baseDeDatos.eps select at).ToList();
@@ -41,6 +41,13 @@ namespace Modelo
             ddlEps.DataTextField = "nombre_eps";
             ddlEps.DataBind();
 
+        }
+        public void listaCentroMedico(ref DropDownList ddlListaCentroMedico)
+        {
+            ddlListaCentroMedico.DataSource = (from centromedico in baseDeDatos.centro_medico select centromedico).ToList();
+            ddlListaCentroMedico.DataValueField = "idCentroMedico";
+            ddlListaCentroMedico.DataTextField = "nombre_centro";
+            ddlListaCentroMedico.DataBind();
         }
     }
 }

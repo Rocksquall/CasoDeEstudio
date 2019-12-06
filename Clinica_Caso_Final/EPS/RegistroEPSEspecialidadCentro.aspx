@@ -12,7 +12,7 @@
         <asp:Panel ID="Panel1" runat="server">
             <div>
                 <asp:Label ID="lblEspecialidad_EPS" runat="server" Text="Especialidad Eps: "></asp:Label>
-                <asp:TextBox ID="txtespecialidad" placeholder="Especialidad" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtespecialidad" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtespecialidad" ErrorMessage="Debe ingresar el Nombre de la Especialidad es obligatorio" ForeColor="#CC0066"></asp:RequiredFieldValidator>
             </div>
 

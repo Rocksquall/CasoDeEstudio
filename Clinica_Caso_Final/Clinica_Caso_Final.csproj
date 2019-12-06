@@ -67,28 +67,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\registrarEPS.aspx" />
     <Content Include="EPS\actualizarEpsCentro.aspx" />
+    <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
     <Content Include="EPS\RegistroEPSEspecialidadCentro.aspx" />
     <Content Include="Usuario\crudUsuario.aspx" />
     <Content Include="formularioRegistro.aspx" />
-    <Content Include="Administrador\indexAdministrador.aspx" />
+    <Content Include="Administrador\editarEPS.aspx" />
     <Content Include="EPS\registroEPSCentro.aspx" />
     <Content Include="Usuario\indexUsuario.aspx" />
     <Content Include="EPS\loginEPS.aspx" />
     <Content Include="Usuario\Login.aspx" />
     <Content Include="resource\img\editar.png" />
     <Content Include="resource\img\eliminar.png" />
-    <Content Include="Administrador\SeleccionAdministrador.aspx" />
+    <Content Include="Administrador\indexAdministrador.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\registrarEPS.aspx.cs">
+      <DependentUpon>registrarEPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\registrarEPS.aspx.designer.cs">
+      <DependentUpon>registrarEPS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EPS\actualizarEpsCentro.aspx.cs">
       <DependentUpon>actualizarEpsCentro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EPS\actualizarEpsCentro.aspx.designer.cs">
       <DependentUpon>actualizarEpsCentro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EPS\actualizarEpsEspecialidad.aspx.cs">
+      <DependentUpon>actualizarEpsEspecialidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EPS\actualizarEpsEspecialidad.aspx.designer.cs">
+      <DependentUpon>actualizarEpsEspecialidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\indexEps.aspx.cs">
       <DependentUpon>indexEps.aspx</DependentUpon>
@@ -118,12 +134,12 @@
     <Compile Include="formularioRegistro.aspx.designer.cs">
       <DependentUpon>formularioRegistro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\indexAdministrador.aspx.cs">
-      <DependentUpon>indexAdministrador.aspx</DependentUpon>
+    <Compile Include="Administrador\editarEPS.aspx.cs">
+      <DependentUpon>editarEPS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrador\indexAdministrador.aspx.designer.cs">
-      <DependentUpon>indexAdministrador.aspx</DependentUpon>
+    <Compile Include="Administrador\editarEPS.aspx.designer.cs">
+      <DependentUpon>editarEPS.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\registroEPSCentro.aspx.cs">
       <DependentUpon>registroEPSCentro.aspx</DependentUpon>
@@ -154,12 +170,12 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Administrador\SeleccionAdministrador.aspx.cs">
-      <DependentUpon>SeleccionAdministrador.aspx</DependentUpon>
+    <Compile Include="Administrador\indexAdministrador.aspx.cs">
+      <DependentUpon>indexAdministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrador\SeleccionAdministrador.aspx.designer.cs">
-      <DependentUpon>SeleccionAdministrador.aspx</DependentUpon>
+    <Compile Include="Administrador\indexAdministrador.aspx.designer.cs">
+      <DependentUpon>indexAdministrador.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
