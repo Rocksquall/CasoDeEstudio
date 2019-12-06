@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="crudUsuario.aspx" />
     <Content Include="formularioRegistro.aspx" />
-    <Content Include="indexAdminsitrador.aspx" />
+    <Content Include="indexAdministrador.aspx" />
     <Content Include="indexEPS.aspx" />
     <Content Include="indexUsuario.aspx" />
     <Content Include="LoginAdmin.aspx" />
@@ -94,11 +94,12 @@
     <Compile Include="formularioRegistro.aspx.designer.cs">
       <DependentUpon>formularioRegistro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="indexAdminsitrador.aspx.cs">
-      <DependentUpon>indexAdminsitrador.aspx</DependentUpon>
+    <Compile Include="indexAdministrador.aspx.cs">
+      <DependentUpon>indexAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="indexAdminsitrador.aspx.designer.cs">
-      <DependentUpon>indexAdminsitrador.aspx</DependentUpon>
+    <Compile Include="indexAdministrador.aspx.designer.cs">
+      <DependentUpon>indexAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="indexEPS.aspx.cs">
       <DependentUpon>indexEPS.aspx</DependentUpon>

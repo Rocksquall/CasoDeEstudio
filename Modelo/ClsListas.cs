@@ -28,6 +28,23 @@ namespace Modelo
             ddlNivelAtencion.DataBind();
 
         }
+        public void listaEspecialidad(ref DropDownList ddlEspecialidad)
+        {
 
+            ddlEspecialidad.DataSource = (from at in baseDeDatos.especialidad select at).ToList();
+            ddlEspecialidad.DataValueField = "idespecialidad";
+            ddlEspecialidad.DataTextField = "especialidad_eps";
+            ddlEspecialidad.DataBind();
+
+        }
+        public void listaEps(ref DropDownList ddlEps)
+        {
+
+            ddlEps.DataSource = (from at in baseDeDatos.eps select at).ToList();
+            ddlEps.DataValueField = "ideps";
+            ddlEps.DataTextField = "nombre_eps";
+            ddlEps.DataBind();
+
+        }
     }
 }

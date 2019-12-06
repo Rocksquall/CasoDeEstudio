@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsCentroMedico.cs" />
     <Compile Include="ClsListas.cs" />
     <Compile Include="ClsLogin.cs" />
     <Compile Include="ClsRol.cs" />

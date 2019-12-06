@@ -20,5 +20,17 @@ namespace Modelo
             var listaNivelAtencion = (from at in baseDeDatos.nivel_atencion select at).ToList();
             return listaNivelAtencion;
         }
+        public List<especialidad> ListaEspecialidad()
+        {
+            OrmDataContext baseDeDatos = new OrmDataContext();
+            var listaEspecialidad = (from es in baseDeDatos.especialidad select es).ToList();
+            return listaEspecialidad;
+        }
+        public List<eps> ListaEps()
+        {
+            OrmDataContext baseDeDatos = new OrmDataContext();
+            var listaeps = (from ep in baseDeDatos.eps select ep).ToList();
+            return listaeps;
+        }
     }
 }
