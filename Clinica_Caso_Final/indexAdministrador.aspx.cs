@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Modelo;
+﻿using Modelo;
+using System;
 
 namespace Clinica_Caso_Final
 {
@@ -17,9 +12,15 @@ namespace Clinica_Caso_Final
             if (!IsPostBack)
             {
                 ClsListas lista = new ClsListas();
+#pragma warning disable CS1061 // "ClsListas" no contiene una definición para "listaNivelAtencion" ni un método de extensión accesible "listaNivelAtencion" que acepte un primer argumento del tipo "ClsListas" (¿falta alguna directiva using o una referencia de ensamblado?)
                 lista.listaNivelAtencion(ref ddlNivelAtencion);
+#pragma warning restore CS1061 // "ClsListas" no contiene una definición para "listaNivelAtencion" ni un método de extensión accesible "listaNivelAtencion" que acepte un primer argumento del tipo "ClsListas" (¿falta alguna directiva using o una referencia de ensamblado?)
+#pragma warning disable CS1061 // "ClsListas" no contiene una definición para "listaEspecialidad" ni un método de extensión accesible "listaEspecialidad" que acepte un primer argumento del tipo "ClsListas" (¿falta alguna directiva using o una referencia de ensamblado?)
                 lista.listaEspecialidad(ref ddlEspecialidad);
+#pragma warning restore CS1061 // "ClsListas" no contiene una definición para "listaEspecialidad" ni un método de extensión accesible "listaEspecialidad" que acepte un primer argumento del tipo "ClsListas" (¿falta alguna directiva using o una referencia de ensamblado?)
+#pragma warning disable CS1061 // "ClsListas" no contiene una definición para "listaEps" ni un método de extensión accesible "listaEps" que acepte un primer argumento del tipo "ClsListas" (¿falta alguna directiva using o una referencia de ensamblado?)
                 lista.listaEps(ref ddlEps);
+#pragma warning restore CS1061 // "ClsListas" no contiene una definición para "listaEps" ni un método de extensión accesible "listaEps" que acepte un primer argumento del tipo "ClsListas" (¿falta alguna directiva using o una referencia de ensamblado?)
             }
         }
 
@@ -28,7 +29,11 @@ namespace Clinica_Caso_Final
         protected void Button1_Click(object sender, EventArgs e)
         {
             centro_medico usuarioDto = new centro_medico();
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'ClsCentroMedico' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'ClsCentroMedico' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
             ClsCentroMedico usuarioDao = new ClsCentroMedico();
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'ClsCentroMedico' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'ClsCentroMedico' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
             usuarioDto.nombre_centro = txtCentro.Text;
             usuarioDto.direccion_centro = txtDireccionCentro.Text;
             usuarioDto.foto_centro = txtFotoCentro.Text;

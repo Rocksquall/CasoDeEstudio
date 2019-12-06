@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Modelo
 {
@@ -43,11 +40,6 @@ namespace Modelo
                 var usuarioActualizar = (from ce in baseDeDatos.centro_medico where ce.idcentro_medico == centro.idcentro_medico select ce).FirstOrDefault();
                 if (usuarioActualizar != null)
                 {
-                    usuarioActualizar.nombre_u = centro.nombre_u;
-                    usuarioActualizar.apellido_u = centro.apellido_u;
-                    usuarioActualizar.cedula_u = centro.cedula_u;
-                    usuarioActualizar.telefono_u = centro.telefono_u;
-                    usuarioActualizar.correo_u = centro.correo_u;
                     baseDeDatos.SubmitChanges();
                     mensaje = "Se Actualizo";
                 }

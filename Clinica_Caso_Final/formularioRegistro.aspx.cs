@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Modelo;
+﻿using Modelo;
+using System;
 
 namespace Clinica_Caso_Final
 {
@@ -13,7 +8,7 @@ namespace Clinica_Caso_Final
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario baseDeDatos = new usuario();
-   
+
             if (!IsPostBack)
             {
                 ClsListas lista = new ClsListas();

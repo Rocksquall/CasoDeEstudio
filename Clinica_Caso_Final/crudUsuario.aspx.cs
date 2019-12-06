@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Modelo;
+using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Modelo;
 
 
 namespace Clinica_Caso_Final

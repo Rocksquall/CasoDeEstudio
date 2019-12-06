@@ -10,3 +10,9 @@ C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\obj\Debug\Modelo.pdb
 C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.dll.config
 C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.dll
 C:\Users\Rocksquall\Desktop\Clinica_Caso_Final\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Rocksquall\Source\Repos\Rocksquall\CasoDeEstudio\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Rocksquall\Source\Repos\Rocksquall\CasoDeEstudio\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Rocksquall\Source\Repos\Rocksquall\CasoDeEstudio\Modelo\bin\Debug\Modelo.dll
+C:\Users\Rocksquall\Source\Repos\Rocksquall\CasoDeEstudio\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Rocksquall\Source\Repos\Rocksquall\CasoDeEstudio\Modelo\obj\Debug\Modelo.dll
+C:\Users\Rocksquall\Source\Repos\Rocksquall\CasoDeEstudio\Modelo\obj\Debug\Modelo.pdb

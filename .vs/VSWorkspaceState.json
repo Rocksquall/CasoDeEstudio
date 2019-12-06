@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Modelo"
+    "\\Modelo",
+    "\\Modelo\\obj"
   ],
   "SelectedNode": "\\Clinica_Caso_Final.sln",
   "PreviewInSolutionExplorer": false
