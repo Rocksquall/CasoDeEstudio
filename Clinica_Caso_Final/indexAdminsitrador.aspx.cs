@@ -8,16 +8,16 @@ using Modelo;
 
 namespace Clinica_Caso_Final
 {
-    public partial class indexAdministrador
+    public partial class indexAdminstrador : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-       
+            usuario baseDeDatos = new usuario();
 
             if (!IsPostBack)
             {
                 ClsListas lista = new ClsListas();
-                lista.listaNivelAtencion(ref ddl;
+                lista.listaNivelAtencion(ref ddlListaRol);
 
 
             }
