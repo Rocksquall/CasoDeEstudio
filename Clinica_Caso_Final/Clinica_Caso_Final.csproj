@@ -72,6 +72,18 @@
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
     <Content Include="EPS\RegistroEPSEspecialidadCentro.aspx" />
+    <Content Include="resource\css\app.css" />
+    <Content Include="resource\css\bootstrap-grid.css" />
+    <Content Include="resource\css\bootstrap-grid.min.css" />
+    <Content Include="resource\css\bootstrap-reboot.css" />
+    <Content Include="resource\css\bootstrap-reboot.min.css" />
+    <Content Include="resource\css\bootstrap.css" />
+    <Content Include="resource\css\bootstrap.min.css" />
+    <Content Include="resource\js\bootstrap.bundle.js" />
+    <Content Include="resource\js\bootstrap.bundle.min.js" />
+    <Content Include="resource\js\bootstrap.js" />
+    <Content Include="resource\js\bootstrap.min.js" />
+    <Content Include="resource\js\jquery-3.4.1.min.js" />
     <Content Include="Usuario\crudUsuario.aspx" />
     <Content Include="formularioRegistro.aspx" />
     <Content Include="Administrador\editarEPS.aspx" />
@@ -180,6 +192,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="resource\css\bootstrap-grid.css.map" />
+    <Content Include="resource\css\bootstrap-grid.min.css.map" />
+    <Content Include="resource\css\bootstrap-reboot.css.map" />
+    <Content Include="resource\css\bootstrap-reboot.min.css.map" />
+    <Content Include="resource\css\bootstrap.css.map" />
+    <Content Include="resource\css\bootstrap.min.css.map" />
+    <Content Include="resource\js\bootstrap.bundle.js.map" />
+    <Content Include="resource\js\bootstrap.bundle.min.js.map" />
+    <Content Include="resource\js\bootstrap.js.map" />
+    <Content Include="resource\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
