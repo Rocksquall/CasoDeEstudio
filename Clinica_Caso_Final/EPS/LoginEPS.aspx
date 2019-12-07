@@ -6,12 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="" rel="stylesheet" />
 </head>
 <body>
     <form id="form2" runat="server">
         <div>
-            <asp:Login ID="iniciarSesionEPS" runat="server" OnAuthenticate="iniciarSesion_Row" TitleText="Iniciar Sesión" UserNameLabelText="NIT EPS"></asp:Login>
+            <asp:Login ID="iniciarSesionEPS" runat="server" OnAuthenticate="IniciarSesion2_Authenticate" TitleText="Iniciar Sesión" UserNameLabelText="NIT EPS"></asp:Login>
         </div>
         <asp:Label ID="lblMensajeEPS" runat="server"></asp:Label>
         <br />

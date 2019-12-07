@@ -10,10 +10,10 @@
 <body>
     <form id="formularioSeleccion" runat="server">
         <div>
-            <a href="LoginAdmin.aspx">Registrar EPS</a>
-            <a href="#">Consultar y editar EPS</a>
-            <a href="#">Registrar Centro Medico</a>
-            <a href="#">Consultar y editar Centro Medico</a>
+            <a href="registrarEPS.aspx">Registrar EPS</a>
+            <a href="editarEPS.aspx">Consultar y editar EPS</a>
+            <a href="../EPS/registroEPSCentro.aspx">Registrar Centro Medico</a>
+            <a href="../EPS/actualizarEpsCentro.aspx">Consultar y editar Centro Medico</a>
         </div>
     </form>
 </body>

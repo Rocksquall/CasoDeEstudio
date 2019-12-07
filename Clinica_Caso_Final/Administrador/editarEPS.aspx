@@ -14,7 +14,7 @@
          <div>
                          <asp:Panel ID="pnlConsulta" runat="server">
                 <asp:Label ID="Label1" runat="server" Text="Lista EPS"></asp:Label>
-                <asp:GridView ID="glvEps" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" OnRowCommand="glvEps_RowCommand" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
+                <asp:GridView ID="glvEps" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" OnRowCommand="GlvEps_RowCommand" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
                     <Columns>
                         <asp:BoundField DataField="ideps" HeaderText="ID" />
                         <asp:BoundField DataField="nit_eps" HeaderText="Nit" />
@@ -64,7 +64,7 @@
                                          <asp:TextBox ID="txtTelefono_EPS" runat="server"></asp:TextBox>
                                      </div>
                                      <div>
-                                         <asp:Button ID="btnActualizar" runat="server" OnClick="btnActualizar_Click" Text="Actualizar" />
+                                         <asp:Button ID="btnActualizar" runat="server" OnClick="BtnActualizar_Click" Text="Actualizar" />
                                      </div>
                                  </div>
                              </asp:Panel>

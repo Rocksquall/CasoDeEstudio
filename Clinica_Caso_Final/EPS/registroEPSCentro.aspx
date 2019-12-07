@@ -8,8 +8,8 @@
     <title>Index Usuario</title>
 </head>
 <body>
-    <form id="formRegistroEps" runat="server">
-        <asp:Panel ID="Panel1" runat="server">
+ <form id="formAdministrador" runat="server">
+        <div>
             <div>
                 <div>
                     <div>
@@ -49,7 +49,7 @@
                         <asp:DropDownList ID="ddlNivelAtencion" runat="server">
                         </asp:DropDownList>
                     </div>
-                    <div>
+                   <div>
                         <asp:Label ID="lblEspecialidad" runat="server" Text="Especialidad: "></asp:Label>
                         <asp:DropDownList ID="ddlEspecialidad" runat="server">
                         </asp:DropDownList>
@@ -61,11 +61,9 @@
                     </div>
                 </div>
                 <br />
-                <asp:Button ID="Button1" runat="server" Text="Registrar Centro medico" OnClick="Button1_Click" />
-                <br />
-                <br />
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
             </div>
-        </asp:Panel>
+        </div>
     </form>
 </body>
 </html>

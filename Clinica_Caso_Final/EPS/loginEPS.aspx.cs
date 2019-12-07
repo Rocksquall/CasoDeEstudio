@@ -12,7 +12,7 @@ namespace Clinica_Caso_Final
             eps usuarioDto = new eps();
             ClsLogin usuarioDao = new ClsLogin();
 
-            usuarioDto = usuarioDao.loginEps(iniciarSesion.UserName, iniciarSesion.Password);
+            usuarioDto = usuarioDao.loginEps(iniciarSesionEPS.UserName, iniciarSesionEPS.Password);
             if (usuarioDto != null)
             {
 

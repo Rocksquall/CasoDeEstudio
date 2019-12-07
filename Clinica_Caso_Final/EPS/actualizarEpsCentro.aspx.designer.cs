@@ -42,13 +42,13 @@ namespace Clinica_Caso_Final.EPS
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control glvCentroMedico.
+        /// Control glvEps.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView glvCentroMedico;
+        protected global::System.Web.UI.WebControls.GridView glvEps;
 
         /// <summary>
         /// Control pnlActualizar.
@@ -69,157 +69,94 @@ namespace Clinica_Caso_Final.EPS
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control lblIdCentroMedico.
+        /// Control lblidEps.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIdCentroMedico;
+        protected global::System.Web.UI.WebControls.Label lblidEps;
 
         /// <summary>
-        /// Control txtIdCentroMedico.
+        /// Control txtidEps.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdCentroMedico;
+        protected global::System.Web.UI.WebControls.TextBox txtidEps;
 
         /// <summary>
-        /// Control lblNombreMedico.
+        /// Control lblnitEps.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreMedico;
+        protected global::System.Web.UI.WebControls.Label lblnitEps;
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control txtnitEps.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtnitEps;
 
         /// <summary>
-        /// Control lblDireccion.
+        /// Control lblNombre_EPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDireccion;
+        protected global::System.Web.UI.WebControls.Label lblNombre_EPS;
 
         /// <summary>
-        /// Control txtDireccion.
+        /// Control txtNombre_EPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre_EPS;
 
         /// <summary>
-        /// Control lblfoto.
+        /// Control lblDireccion_EPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfoto;
+        protected global::System.Web.UI.WebControls.Label lblDireccion_EPS;
 
         /// <summary>
-        /// Control fudloadImagen.
+        /// Control txtDireccion_EPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fudloadImagen;
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion_EPS;
 
         /// <summary>
-        /// Control VisualizarImg.
+        /// Control lblTelefono_EPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image VisualizarImg;
+        protected global::System.Web.UI.WebControls.Label lblTelefono_EPS;
 
         /// <summary>
-        /// Control lblHoraInicio.
+        /// Control txtTelefono_EPS.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHoraInicio;
-
-        /// <summary>
-        /// Control txtHoraInicio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHoraInicio;
-
-        /// <summary>
-        /// Control lblHoraFin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHoraFin;
-
-        /// <summary>
-        /// Control txtHoraFin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHoraFin;
-
-        /// <summary>
-        /// Control lblTelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTelefono;
-
-        /// <summary>
-        /// Control txttelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttelefono;
-
-        /// <summary>
-        /// Control lblVisita.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVisita;
-
-        /// <summary>
-        /// Control txtVisita.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtVisita;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono_EPS;
 
         /// <summary>
         /// Control btnActualizar.

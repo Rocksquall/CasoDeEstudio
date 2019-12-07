@@ -15,22 +15,13 @@ namespace Clinica_Caso_Final
     {
 
         /// <summary>
-        /// Control formRegistroEps.
+        /// Control formAdministrador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formRegistroEps;
-
-        /// <summary>
-        /// Control Panel1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formAdministrador;
 
         /// <summary>
         /// Control lblIdCentro.

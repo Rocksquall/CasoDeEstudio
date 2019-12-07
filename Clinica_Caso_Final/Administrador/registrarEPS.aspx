@@ -35,7 +35,7 @@
 
                 <div>
                     <asp:Label ID="lblClave" runat="server" Text="Clave: "></asp:Label>
-                    <asp:TextBox ID="txtClave" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtClave_Eps" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtClave_Eps" ErrorMessage="Debe ingresar la Clave de la Eps es obligatorio" ForeColor="#CC0066"></asp:RequiredFieldValidator>
                 </div>
 

@@ -150,13 +150,13 @@ namespace Clinica_Caso_Final.Administrador
         protected global::System.Web.UI.WebControls.Label lblClave;
 
         /// <summary>
-        /// Control txtClave.
+        /// Control txtClave_Eps.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClave;
+        protected global::System.Web.UI.WebControls.TextBox txtClave_Eps;
 
         /// <summary>
         /// Control RequiredFieldValidator5.

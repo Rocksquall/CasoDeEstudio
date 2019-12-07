@@ -21,12 +21,12 @@ namespace Clinica_Caso_Final
 
                 if (usuarioDto.rol_idrol == 1)
                 {
-                    Response.Redirect("indexAdministrador.aspx", false);
+                    Response.Redirect("~/Administrador/indexAdministrador.aspx", false);
                 }
 
                 if (usuarioDto.rol_idrol == 3)
                 {
-                    Response.Redirect("indexUsuario.aspx", false);
+                    Response.Redirect("~/Usuario/indexUsuario.aspx", false);
                 }
             }
             else
