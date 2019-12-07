@@ -12,7 +12,7 @@ namespace Clinica_Caso_Final
             if (!IsPostBack)
             {
                 ClsListas lista = new ClsListas();
-                lista.listaRol(ref ddlRol);
+                lista.ListaRol(ref ddlRol);
 
 
             }
