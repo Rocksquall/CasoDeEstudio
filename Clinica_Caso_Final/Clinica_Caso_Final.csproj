@@ -71,6 +71,7 @@
     <Content Include="EPS\actualizarEpsCentro.aspx" />
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
+    <Content Include="Usuario\indexUsuario.aspx" />
     <Content Include="Usuario\registroCita.aspx" />
     <Content Include="EPS\RegistroEPSEspecialidadCentro.aspx" />
     <Content Include="resource\css\app.css" />
@@ -89,7 +90,6 @@
     <Content Include="formularioRegistro.aspx" />
     <Content Include="Administrador\editarEPS.aspx" />
     <Content Include="EPS\registroEPSCentro.aspx" />
-    <Content Include="Usuario\indexUsuario.aspx" />
     <Content Include="EPS\loginEPS.aspx" />
     <Content Include="Usuario\Login.aspx" />
     <Content Include="resource\img\editar.png" />
@@ -125,6 +125,13 @@
     </Compile>
     <Compile Include="EPS\indexEps.aspx.designer.cs">
       <DependentUpon>indexEps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\indexUsuario.aspx.cs">
+      <DependentUpon>indexUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\indexUsuario.aspx.designer.cs">
+      <DependentUpon>indexUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuario\registroCita.aspx.cs">
       <DependentUpon>registroCita.aspx</DependentUpon>
@@ -167,13 +174,6 @@
     </Compile>
     <Compile Include="EPS\registroEPSCentro.aspx.designer.cs">
       <DependentUpon>registroEPSCentro.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario\indexUsuario.aspx.cs">
-      <DependentUpon>indexUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuario\indexUsuario.aspx.designer.cs">
-      <DependentUpon>indexUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\loginEPS.aspx.cs">
       <DependentUpon>loginEPS.aspx</DependentUpon>

@@ -17,7 +17,7 @@ namespace Clinica_Caso_Final
             }
         }
 
-        protected void glvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GlvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             GridViewRow fila = (GridViewRow)((Control)e.CommandSource).NamingContainer;
             int index = fila.RowIndex;

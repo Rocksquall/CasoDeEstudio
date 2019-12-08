@@ -12,7 +12,7 @@
         <div>
             <asp:Panel ID="pnlConsulta" runat="server">
                 <asp:Label ID="Label1" runat="server" Text="Lista Usuarios"></asp:Label>
-                <asp:GridView ID="glvUsuarios" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="glvUsuarios_RowCommand" Width="606px" OnSelectedIndexChanged="glvUsuarios_SelectedIndexChanged">
+                <asp:GridView ID="glvUsuarios" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="GlvUsuarios_RowCommand" Width="606px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="idUsuario" HeaderText="ID" />
