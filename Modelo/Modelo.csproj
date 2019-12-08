@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsCentroMedico.cs" />
+    <Compile Include="ClsCita.cs" />
     <Compile Include="ClsEps.cs" />
     <Compile Include="ClsEspecialidad.cs" />
     <Compile Include="ClsListas.cs" />

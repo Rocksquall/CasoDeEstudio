@@ -71,6 +71,7 @@
     <Content Include="EPS\actualizarEpsCentro.aspx" />
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
+    <Content Include="Usuario\registroCita.aspx" />
     <Content Include="EPS\RegistroEPSEspecialidadCentro.aspx" />
     <Content Include="resource\css\app.css" />
     <Content Include="resource\css\bootstrap-grid.css" />
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="EPS\indexEps.aspx.designer.cs">
       <DependentUpon>indexEps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\registroCita.aspx.cs">
+      <DependentUpon>registroCita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\registroCita.aspx.designer.cs">
+      <DependentUpon>registroCita.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\RegistroEPSEspecialidadCentro.aspx.cs">
       <DependentUpon>RegistroEPSEspecialidadCentro.aspx</DependentUpon>
