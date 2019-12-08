@@ -15,7 +15,7 @@ namespace Clinica_Caso_Final.Administrador
 
             if (!IsPostBack)
             {
-                ClsListas lista = new ClsListas();
+           
             }
         }
 

@@ -12,10 +12,11 @@ namespace Clinica_Caso_Final.EPS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ClsListas lista = new ClsListas();
+            lista.listaCentroMedico(ref ddlCentroMedico);
         }
 
-        protected void btnRegistrarCita_Click(object sender, EventArgs e)
+        protected void BtnRegistrarCita_Click(object sender, EventArgs e)
         {
             cita citadto = new cita();
             ClsCita citadao = new ClsCita();

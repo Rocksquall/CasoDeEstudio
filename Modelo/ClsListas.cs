@@ -45,9 +45,10 @@ namespace Modelo
         public void listaCentroMedico(ref DropDownList ddlListaCentroMedico)
         {
             ddlListaCentroMedico.DataSource = (from centromedico in baseDeDatos.centro_medico select centromedico).ToList();
-            ddlListaCentroMedico.DataValueField = "idCentroMedico";
+            ddlListaCentroMedico.DataValueField = "idCentro_Medico";
             ddlListaCentroMedico.DataTextField = "nombre_centro";
             ddlListaCentroMedico.DataBind();
         }
+
     }
 }
