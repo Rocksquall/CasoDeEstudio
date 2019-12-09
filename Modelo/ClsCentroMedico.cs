@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace Modelo
 {
@@ -27,7 +31,12 @@ namespace Modelo
             return mensaje;
 
         }
-
+        public List<centro_medico> ListaCentroMedico(ref GridView glvCentros)
+        {
+            OrmDataContext baseDeDatos = new OrmDataContext();
+            var ListaCentro = (from cm in baseDeDatos.centro_medico select cm).ToList();
+            return ListaCentro;
+        }
         public string actualizarCentroMedico(centro_medico centro)
         {
             string mensaje;

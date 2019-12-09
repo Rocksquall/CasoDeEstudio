@@ -45,15 +45,9 @@ namespace Modelo
     partial void Insertnivel_atencion(nivel_atencion instance);
     partial void Updatenivel_atencion(nivel_atencion instance);
     partial void Deletenivel_atencion(nivel_atencion instance);
-    partial void Insertpermisos(permisos instance);
-    partial void Updatepermisos(permisos instance);
-    partial void Deletepermisos(permisos instance);
     partial void Insertrol(rol instance);
     partial void Updaterol(rol instance);
     partial void Deleterol(rol instance);
-    partial void Insertrol_permisos(rol_permisos instance);
-    partial void Updaterol_permisos(rol_permisos instance);
-    partial void Deleterol_permisos(rol_permisos instance);
     partial void Insertusuario(usuario instance);
     partial void Updateusuario(usuario instance);
     partial void Deleteusuario(usuario instance);
@@ -132,27 +126,11 @@ namespace Modelo
 			}
 		}
 		
-		public System.Data.Linq.Table<permisos> permisos
-		{
-			get
-			{
-				return this.GetTable<permisos>();
-			}
-		}
-		
 		public System.Data.Linq.Table<rol> rol
 		{
 			get
 			{
 				return this.GetTable<rol>();
-			}
-		}
-		
-		public System.Data.Linq.Table<rol_permisos> rol_permisos
-		{
-			get
-			{
-				return this.GetTable<rol_permisos>();
 			}
 		}
 		
@@ -1243,192 +1221,6 @@ namespace Modelo
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="casodeestudio.permisos")]
-	public partial class permisos : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _idpermisos;
-		
-		private string _permisos1;
-		
-		private string _url;
-		
-		private string _icono;
-		
-		private string _nombre;
-		
-		private EntitySet<rol_permisos> _rol_permisos;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidpermisosChanging(int value);
-    partial void OnidpermisosChanged();
-    partial void Onpermisos1Changing(string value);
-    partial void Onpermisos1Changed();
-    partial void OnurlChanging(string value);
-    partial void OnurlChanged();
-    partial void OniconoChanging(string value);
-    partial void OniconoChanged();
-    partial void OnnombreChanging(string value);
-    partial void OnnombreChanged();
-    #endregion
-		
-		public permisos()
-		{
-			this._rol_permisos = new EntitySet<rol_permisos>(new Action<rol_permisos>(this.attach_rol_permisos), new Action<rol_permisos>(this.detach_rol_permisos));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idpermisos", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int idpermisos
-		{
-			get
-			{
-				return this._idpermisos;
-			}
-			set
-			{
-				if ((this._idpermisos != value))
-				{
-					this.OnidpermisosChanging(value);
-					this.SendPropertyChanging();
-					this._idpermisos = value;
-					this.SendPropertyChanged("idpermisos");
-					this.OnidpermisosChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="permisos", Storage="_permisos1", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string permisos1
-		{
-			get
-			{
-				return this._permisos1;
-			}
-			set
-			{
-				if ((this._permisos1 != value))
-				{
-					this.Onpermisos1Changing(value);
-					this.SendPropertyChanging();
-					this._permisos1 = value;
-					this.SendPropertyChanged("permisos1");
-					this.Onpermisos1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_url", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string url
-		{
-			get
-			{
-				return this._url;
-			}
-			set
-			{
-				if ((this._url != value))
-				{
-					this.OnurlChanging(value);
-					this.SendPropertyChanging();
-					this._url = value;
-					this.SendPropertyChanged("url");
-					this.OnurlChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icono", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string icono
-		{
-			get
-			{
-				return this._icono;
-			}
-			set
-			{
-				if ((this._icono != value))
-				{
-					this.OniconoChanging(value);
-					this.SendPropertyChanging();
-					this._icono = value;
-					this.SendPropertyChanged("icono");
-					this.OniconoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string nombre
-		{
-			get
-			{
-				return this._nombre;
-			}
-			set
-			{
-				if ((this._nombre != value))
-				{
-					this.OnnombreChanging(value);
-					this.SendPropertyChanging();
-					this._nombre = value;
-					this.SendPropertyChanged("nombre");
-					this.OnnombreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="permisos_rol_permisos", Storage="_rol_permisos", ThisKey="idpermisos", OtherKey="permisos_idpermisos")]
-		public EntitySet<rol_permisos> rol_permisos
-		{
-			get
-			{
-				return this._rol_permisos;
-			}
-			set
-			{
-				this._rol_permisos.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_rol_permisos(rol_permisos entity)
-		{
-			this.SendPropertyChanging();
-			entity.permisos = this;
-		}
-		
-		private void detach_rol_permisos(rol_permisos entity)
-		{
-			this.SendPropertyChanging();
-			entity.permisos = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="casodeestudio.rol")]
 	public partial class rol : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1438,8 +1230,6 @@ namespace Modelo
 		private int _idrol;
 		
 		private string _rol1;
-		
-		private EntitySet<rol_permisos> _rol_permisos;
 		
 		private EntitySet<usuario> _usuario;
 		
@@ -1455,7 +1245,6 @@ namespace Modelo
 		
 		public rol()
 		{
-			this._rol_permisos = new EntitySet<rol_permisos>(new Action<rol_permisos>(this.attach_rol_permisos), new Action<rol_permisos>(this.detach_rol_permisos));
 			this._usuario = new EntitySet<usuario>(new Action<usuario>(this.attach_usuario), new Action<usuario>(this.detach_usuario));
 			OnCreated();
 		}
@@ -1500,19 +1289,6 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_rol_permisos", Storage="_rol_permisos", ThisKey="idrol", OtherKey="rol_idrol")]
-		public EntitySet<rol_permisos> rol_permisos
-		{
-			get
-			{
-				return this._rol_permisos;
-			}
-			set
-			{
-				this._rol_permisos.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario", Storage="_usuario", ThisKey="idrol", OtherKey="rol_idrol")]
 		public EntitySet<usuario> usuario
 		{
@@ -1546,18 +1322,6 @@ namespace Modelo
 			}
 		}
 		
-		private void attach_rol_permisos(rol_permisos entity)
-		{
-			this.SendPropertyChanging();
-			entity.rol = this;
-		}
-		
-		private void detach_rol_permisos(rol_permisos entity)
-		{
-			this.SendPropertyChanging();
-			entity.rol = null;
-		}
-		
 		private void attach_usuario(usuario entity)
 		{
 			this.SendPropertyChanging();
@@ -1568,198 +1332,6 @@ namespace Modelo
 		{
 			this.SendPropertyChanging();
 			entity.rol = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="casodeestudio.rol_permisos")]
-	public partial class rol_permisos : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _rol_permisos1;
-		
-		private int _rol_idrol;
-		
-		private int _permisos_idpermisos;
-		
-		private EntityRef<permisos> _permisos;
-		
-		private EntityRef<rol> _rol;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onrol_permisos1Changing(int value);
-    partial void Onrol_permisos1Changed();
-    partial void Onrol_idrolChanging(int value);
-    partial void Onrol_idrolChanged();
-    partial void Onpermisos_idpermisosChanging(int value);
-    partial void Onpermisos_idpermisosChanged();
-    #endregion
-		
-		public rol_permisos()
-		{
-			this._permisos = default(EntityRef<permisos>);
-			this._rol = default(EntityRef<rol>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="rol_permisos", Storage="_rol_permisos1", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int rol_permisos1
-		{
-			get
-			{
-				return this._rol_permisos1;
-			}
-			set
-			{
-				if ((this._rol_permisos1 != value))
-				{
-					this.Onrol_permisos1Changing(value);
-					this.SendPropertyChanging();
-					this._rol_permisos1 = value;
-					this.SendPropertyChanged("rol_permisos1");
-					this.Onrol_permisos1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rol_idrol", DbType="Int NOT NULL")]
-		public int rol_idrol
-		{
-			get
-			{
-				return this._rol_idrol;
-			}
-			set
-			{
-				if ((this._rol_idrol != value))
-				{
-					if (this._rol.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onrol_idrolChanging(value);
-					this.SendPropertyChanging();
-					this._rol_idrol = value;
-					this.SendPropertyChanged("rol_idrol");
-					this.Onrol_idrolChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_permisos_idpermisos", DbType="Int NOT NULL")]
-		public int permisos_idpermisos
-		{
-			get
-			{
-				return this._permisos_idpermisos;
-			}
-			set
-			{
-				if ((this._permisos_idpermisos != value))
-				{
-					if (this._permisos.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onpermisos_idpermisosChanging(value);
-					this.SendPropertyChanging();
-					this._permisos_idpermisos = value;
-					this.SendPropertyChanged("permisos_idpermisos");
-					this.Onpermisos_idpermisosChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="permisos_rol_permisos", Storage="_permisos", ThisKey="permisos_idpermisos", OtherKey="idpermisos", IsForeignKey=true)]
-		public permisos permisos
-		{
-			get
-			{
-				return this._permisos.Entity;
-			}
-			set
-			{
-				permisos previousValue = this._permisos.Entity;
-				if (((previousValue != value) 
-							|| (this._permisos.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._permisos.Entity = null;
-						previousValue.rol_permisos.Remove(this);
-					}
-					this._permisos.Entity = value;
-					if ((value != null))
-					{
-						value.rol_permisos.Add(this);
-						this._permisos_idpermisos = value.idpermisos;
-					}
-					else
-					{
-						this._permisos_idpermisos = default(int);
-					}
-					this.SendPropertyChanged("permisos");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_rol_permisos", Storage="_rol", ThisKey="rol_idrol", OtherKey="idrol", IsForeignKey=true)]
-		public rol rol
-		{
-			get
-			{
-				return this._rol.Entity;
-			}
-			set
-			{
-				rol previousValue = this._rol.Entity;
-				if (((previousValue != value) 
-							|| (this._rol.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._rol.Entity = null;
-						previousValue.rol_permisos.Remove(this);
-					}
-					this._rol.Entity = value;
-					if ((value != null))
-					{
-						value.rol_permisos.Add(this);
-						this._rol_idrol = value.idrol;
-					}
-					else
-					{
-						this._rol_idrol = default(int);
-					}
-					this.SendPropertyChanged("rol");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
@@ -2076,8 +1648,6 @@ namespace Modelo
 		
 		private int _usuario_idusuario;
 		
-		private int _usuario_rol_idrol;
-		
 		private EntityRef<centro_medico> _centro_medico;
 		
 		private EntityRef<usuario> _usuario;
@@ -2094,8 +1664,6 @@ namespace Modelo
     partial void Oncentro_medico_idcentro_medicoChanged();
     partial void Onusuario_idusuarioChanging(int value);
     partial void Onusuario_idusuarioChanged();
-    partial void Onusuario_rol_idrolChanging(int value);
-    partial void Onusuario_rol_idrolChanged();
     #endregion
 		
 		public usuario_centro_medico()
@@ -2189,26 +1757,6 @@ namespace Modelo
 					this._usuario_idusuario = value;
 					this.SendPropertyChanged("usuario_idusuario");
 					this.Onusuario_idusuarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario_rol_idrol", DbType="Int NOT NULL")]
-		public int usuario_rol_idrol
-		{
-			get
-			{
-				return this._usuario_rol_idrol;
-			}
-			set
-			{
-				if ((this._usuario_rol_idrol != value))
-				{
-					this.Onusuario_rol_idrolChanging(value);
-					this.SendPropertyChanging();
-					this._usuario_rol_idrol = value;
-					this.SendPropertyChanged("usuario_rol_idrol");
-					this.Onusuario_rol_idrolChanged();
 				}
 			}
 		}

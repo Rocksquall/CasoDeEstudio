@@ -51,6 +51,7 @@
     <Compile Include="ClsLogin.cs" />
     <Compile Include="ClsRol.cs" />
     <Compile Include="ClsUsuario.cs" />
+    <Compile Include="ClsUsuarioCentroMedico.cs" />
     <Compile Include="Orm.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

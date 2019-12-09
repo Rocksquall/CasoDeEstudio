@@ -71,6 +71,7 @@
     <Content Include="EPS\actualizarEpsCentro.aspx" />
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
+    <Content Include="Usuario\calificarCentroMedico.aspx" />
     <Content Include="Usuario\consultarCitas.aspx" />
     <Content Include="Usuario\consultarLugarCercano.aspx" />
     <Content Include="Usuario\indexUsuario.aspx" />
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="EPS\indexEps.aspx.designer.cs">
       <DependentUpon>indexEps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\calificarCentroMedico.aspx.cs">
+      <DependentUpon>calificarCentroMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\calificarCentroMedico.aspx.designer.cs">
+      <DependentUpon>calificarCentroMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuario\consultarCitas.aspx.cs">
       <DependentUpon>consultarCitas.aspx</DependentUpon>
