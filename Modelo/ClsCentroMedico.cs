@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
+using Modelo;
 
 namespace Modelo
 {
@@ -31,43 +32,48 @@ namespace Modelo
             return mensaje;
 
         }
-        public List<centro_medico> ListaCentroMedico(ref GridView glvCentros)
-        {
-            OrmDataContext baseDeDatos = new OrmDataContext();
-            var ListaCentro = (from cm in baseDeDatos.centro_medico select cm).ToList();
-            return ListaCentro;
-        }
-        public string actualizarCentroMedico(centro_medico centro)
+        public string actualizarCentroMedico(centro_medico cm)
         {
             string mensaje;
 
             OrmDataContext baseDeDatos = new OrmDataContext();
 
-
             try
             {
-                var usuarioActualizar = (from ce in baseDeDatos.centro_medico where ce.idcentro_medico == centro.idcentro_medico select ce).FirstOrDefault();
-                if (usuarioActualizar != null)
+                var centroActualizar = (from centro_medico in baseDeDatos.centro_medico where centro_medico.idcentro_medico == cm.idcentro_medico select cm).FirstOrDefault();
+
+                if (centroActualizar != null)
                 {
+                    centroActualizar.idcentro_medico = cm.idcentro_medico;
+                    centroActualizar.nombre_centro = cm.nombre_centro;
+                    centroActualizar.direccion_centro = cm.direccion_centro;
+                    centroActualizar.foto_centro = cm.foto_centro;
+                    centroActualizar.hora_inicio = cm.hora_inicio;
+                    centroActualizar.hora_fin = cm.hora_fin;
+                    centroActualizar.telefono_centro = cm.telefono_centro;
+                    centroActualizar.visita_centro = cm.visita_centro;
+                    centroActualizar.nivel_atencion_idnivel_atencion = cm.nivel_atencion_idnivel_atencion;
+                    centroActualizar.especialidad_idespecialidad = cm.especialidad_idespecialidad;
+                    centroActualizar.eps_ideps = cm.eps_ideps;
                     baseDeDatos.SubmitChanges();
                     mensaje = "Se Actualizo";
                 }
                 else
                 {
-                    mensaje = "Usuario No existe";
+                    mensaje = "El Centro Medico no existe";
                 }
-
-
             }
+
             catch (Exception ex)
             {
                 mensaje = "Error al actualizar: " + ex.Message;
 
             }
-
             return mensaje;
 
+
         }
+
         public string eliminarCentroMedico(int idcentro_medico)
         {
             string mensaje;
@@ -99,6 +105,12 @@ namespace Modelo
 
             return mensaje;
 
+        }
+        public void ListaCentroMedico(ref GridView glvCentros)
+        {
+            OrmDataContext baseDeDatos = new OrmDataContext();
+            glvCentros.DataSource = (from centro_medico in baseDeDatos.centro_medico select centro_medico).ToList();
+            glvCentros.DataBind();
         }
     }
 }

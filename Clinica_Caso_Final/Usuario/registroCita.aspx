@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Registrar Cita</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,7 +16,9 @@
             <div>
                 <div>
                     <asp:Label ID="lblFechaCita" runat="server" Text="Fecha Cita: "></asp:Label>
-                    <asp:TextBox ID="txtFechaCita" runat="server"></asp:TextBox>
+                    <asp:TextBox  type="date" ID="txtFechaCita" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFechaCita" ErrorMessage="Debe ingresar la fecha de la cita  " ForeColor="#CC0066"></asp:RequiredFieldValidator>
+                    
                 </div>
                 <div>
                     <asp:Label ID="lblCentroMedico" runat="server" Text="Centro Medico: "></asp:Label>

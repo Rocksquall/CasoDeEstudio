@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="casodeestudio" Class="OrmDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A7C28SI\SQLEXPRESS;Initial Catalog=casodeestudio;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="casodeestudioConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PK1362T\SQLEXPRESS;Initial Catalog=casodeestudio;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="casodeestudioConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="casodeestudio.centro_medico" Member="centro_medico">
     <Type Name="centro_medico">
       <Column Name="idcentro_medico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

@@ -15,10 +15,10 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="idcentro_medico" HeaderText="ID" />
-                    <asp:BoundField DataField="nombre_centro" HeaderText="Nombre" />
-                    <asp:BoundField DataField="direccion_centro" HeaderText="Apellido" />
-                    <asp:BoundField DataField="telefono_centro" HeaderText="Cedula" />
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:BoundField DataField="nombre_centro" HeaderText="Centro Medico" />
+                    <asp:BoundField DataField="direccion_centro" HeaderText="Direccion" />
+                    <asp:BoundField DataField="telefono_centro" HeaderText="Telefono" />
+                    <asp:TemplateField HeaderText="Calificar">
                         <ItemTemplate>
                             <asp:ImageButton Width="20px" ID="imgActualizar" runat="server" ImageUrl="~/resource/img/editar.png" CommandName="Calificar" />
                         </ItemTemplate>

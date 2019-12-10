@@ -94,11 +94,11 @@ namespace Modelo
         return mensaje;
 
     }
-    public void listaEps(ref GridView gdvTablaEps)
+    public void listaEps(ref GridView GlvEps)
     {
         OrmDataContext baseDeDatos = new OrmDataContext();
-        gdvTablaEps.DataSource = (from eps in baseDeDatos.eps select eps).ToList();
-        gdvTablaEps.DataBind();
+            GlvEps.DataSource = (from eps in baseDeDatos.eps select eps).ToList();
+            GlvEps.DataBind();
     }
 
 

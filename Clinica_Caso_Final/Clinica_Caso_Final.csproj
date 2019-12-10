@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\registrarEPS.aspx" />
-    <Content Include="EPS\actualizarEpsCentro.aspx" />
+    <Content Include="EPS\actualizarEpsCentroMedico.aspx" />
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
     <Content Include="Usuario\calificarCentroMedico.aspx" />
@@ -108,12 +108,12 @@
     <Compile Include="Administrador\registrarEPS.aspx.designer.cs">
       <DependentUpon>registrarEPS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EPS\actualizarEpsCentro.aspx.cs">
-      <DependentUpon>actualizarEpsCentro.aspx</DependentUpon>
+    <Compile Include="EPS\actualizarEpsCentroMedico.aspx.cs">
+      <DependentUpon>actualizarEpsCentroMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EPS\actualizarEpsCentro.aspx.designer.cs">
-      <DependentUpon>actualizarEpsCentro.aspx</DependentUpon>
+    <Compile Include="EPS\actualizarEpsCentroMedico.aspx.designer.cs">
+      <DependentUpon>actualizarEpsCentroMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\actualizarEpsEspecialidad.aspx.cs">
       <DependentUpon>actualizarEpsEspecialidad.aspx</DependentUpon>
