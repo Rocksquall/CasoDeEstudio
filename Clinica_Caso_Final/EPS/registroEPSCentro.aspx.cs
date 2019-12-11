@@ -27,20 +27,22 @@ namespace Clinica_Caso_Final
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            centro_medico usuarioDto = new centro_medico();
-            ClsCentroMedico usuarioDao = new ClsCentroMedico();
-            usuarioDto.nombre_centro = txtCentro.Text;
-            usuarioDto.direccion_centro = txtDireccionCentro.Text;
-            usuarioDto.foto_centro = txtFotoCentro.Text;
-            usuarioDto.hora_inicio = txtHoraInicioCentro.Text;
-            usuarioDto.hora_fin = txtHoraFinCentro.Text;
-            usuarioDto.telefono_centro = txtTelefonoCentro.Text;
-            usuarioDto.visita_centro = txtVisitaCentro.Text;
-            usuarioDto.nivel_atencion_idnivel_atencion = int.Parse(ddlNivelAtencion.SelectedValue.ToString()); ;
-            usuarioDto.especialidad_idespecialidad = int.Parse(ddlEspecialidad.SelectedValue.ToString()); ;
-            usuarioDto.eps_ideps = int.Parse(ddlEps.SelectedValue.ToString()); ;
-            usuarioDao.registrarCentroMedico(usuarioDto);
-            usuarioDao.registrarCentroMedico(usuarioDto);
+            centro_medico centroMedicoDto = new centro_medico();
+            ClsCentroMedico centroMedicoDao = new ClsCentroMedico();
+            centroMedicoDto.nombre_centro = txtCentro.Text;
+            centroMedicoDto.direccion_centro = txtDireccionCentro.Text;
+            string nombre = fudloadImagen.FileName;
+            string ruta = "~/resource/img/" + nombre;
+            fudloadImagen.SaveAs(Server.MapPath(ruta));
+            centroMedicoDto.foto_centro = ruta;
+            centroMedicoDto.hora_inicio = txtHoraInicioCentro.Text;
+            centroMedicoDto.hora_fin = txtHoraFinCentro.Text;
+            centroMedicoDto.telefono_centro = txtTelefonoCentro.Text;
+            centroMedicoDto.visita_centro = txtVisitaCentro.Text;
+            centroMedicoDto.nivel_atencion_idnivel_atencion = int.Parse(ddlNivelAtencion.SelectedValue.ToString());
+            centroMedicoDto.especialidad_idespecialidad = int.Parse(ddlEspecialidad.SelectedValue.ToString());
+            centroMedicoDto.eps_ideps = int.Parse(ddlEps.SelectedValue.ToString());
+            centroMedicoDao.registrarCentroMedico(centroMedicoDto);
         }
     }
 }

@@ -57,7 +57,7 @@ namespace Modelo
     #endregion
 		
 		public OrmDataContext() : 
-				base(global::Modelo.Properties.Settings.Default.casodeestudioConnectionString, mappingSource)
+				base(global::Modelo.Properties.Settings.Default.casodeestudioConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}

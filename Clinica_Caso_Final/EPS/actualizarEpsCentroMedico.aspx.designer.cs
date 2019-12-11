@@ -132,13 +132,22 @@ namespace Clinica_Caso_Final.EPS
         protected global::System.Web.UI.WebControls.Label lblfoto_centro;
 
         /// <summary>
-        /// Control txtfoto_centro.
+        /// Control fudloadImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfoto_centro;
+        protected global::System.Web.UI.WebControls.FileUpload fudloadImagen;
+
+        /// <summary>
+        /// Control VisualizarImg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image VisualizarImg;
 
         /// <summary>
         /// Control lblhora_inicio.

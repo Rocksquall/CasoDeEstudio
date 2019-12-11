@@ -34,7 +34,7 @@ namespace Clinica_Caso_Final.EPS
                 txtidcentro_medico.Text = glvCentroMedico.Rows[index].Cells[0].Text;
                 txtnombre_centro.Text = glvCentroMedico.Rows[index].Cells[1].Text;
                 txtdireccion_centro.Text = glvCentroMedico.Rows[index].Cells[2].Text;
-                txtfoto_centro.Text = glvCentroMedico.Rows[index].Cells[3].Text;
+                VisualizarImg.ImageUrl = glvCentroMedico.Rows[index].Cells[3].Text;
                 txthora_inicio.Text = glvCentroMedico.Rows[index].Cells[4].Text;
                 txthora_fin.Text = glvCentroMedico.Rows[index].Cells[5].Text;
                 txttelefono_centro.Text = glvCentroMedico.Rows[index].Cells[6].Text;
@@ -60,7 +60,12 @@ namespace Clinica_Caso_Final.EPS
             ClsCentroMedicoDto.idcentro_medico = int.Parse(txtidcentro_medico.Text);
             ClsCentroMedicoDto.nombre_centro = txtnombre_centro.Text;
             ClsCentroMedicoDto.direccion_centro = txtdireccion_centro.Text;
-            ClsCentroMedicoDto.foto_centro = txtfoto_centro.Text;
+            ClsCentroMedicoDto.foto_centro = VisualizarImg.ImageUrl;
+            string nombre = fudloadImagen.FileName;
+            string ruta = "~/resource/img/" + nombre;
+            fudloadImagen.SaveAs(Server.MapPath(ruta));
+            VisualizarImg.ImageUrl = ruta;
+            ClsCentroMedicoDto.foto_centro = ruta;
             ClsCentroMedicoDto.hora_inicio = txthora_inicio.Text;
             ClsCentroMedicoDto.hora_fin = txthora_fin.Text;
             ClsCentroMedicoDto.telefono_centro = txttelefono_centro.Text;

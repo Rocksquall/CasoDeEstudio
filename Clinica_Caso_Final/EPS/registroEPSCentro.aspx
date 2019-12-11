@@ -8,14 +8,11 @@
     <title>Index Usuario</title>
 </head>
 <body>
- <form id="formAdministrador" runat="server">
+    <form id="formAdministrador" runat="server">
         <div>
             <div>
                 <div>
-                    <div>
-                        <asp:Label ID="lblIdCentro" runat="server" Text="ID:"></asp:Label>
-                        <asp:TextBox ID="txtIdCentro" runat="server" Enabled="False"></asp:TextBox>
-                    </div>
+                   
                     <div>
                         <asp:Label ID="lblCentro" runat="server" Text="Nombre Centro Medico: "></asp:Label>
                         <asp:TextBox ID="txtCentro" runat="server"></asp:TextBox>
@@ -26,7 +23,8 @@
                     </div>
                     <div>
                         <asp:Label ID="lblFotoCentro" runat="server" Text="Foto: "></asp:Label>
-                        <asp:TextBox ID="txtFotoCentro" runat="server"></asp:TextBox>
+                        <asp:FileUpload ID="fudloadImagen" runat="server" />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="fudloadImagen" ErrorMessage="Agregue una imagen" ForeColor="#CC0066"></asp:RequiredFieldValidator>
                     </div>
                     <div>
                         <asp:Label ID="lblHoraInicioCentro" runat="server" Text="Hora Inicio: "></asp:Label>
@@ -49,7 +47,7 @@
                         <asp:DropDownList ID="ddlNivelAtencion" runat="server">
                         </asp:DropDownList>
                     </div>
-                   <div>
+                    <div>
                         <asp:Label ID="lblEspecialidad" runat="server" Text="Especialidad: "></asp:Label>
                         <asp:DropDownList ID="ddlEspecialidad" runat="server">
                         </asp:DropDownList>
@@ -61,7 +59,7 @@
                     </div>
                 </div>
                 <br />
-                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Registrar Centro" OnClick="Button1_Click" />
             </div>
         </div>
     </form>

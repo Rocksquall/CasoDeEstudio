@@ -14,7 +14,7 @@
     <div class="formulario-top">
         <div class="card center" style="width: 25rem;">
             <form id="form2" runat="server">
-                <div class="row">
+              <div class="row">
                     <div class="formulario">
                         <div>
                             <asp:Login LabelStyle-CssClass="" LoginButtonStyle-CssClass="btn btn-danger btn-lg btn-block" TitleTextStyle-CssClass="font-weight-bold text-center pt-6"  ID="iniciarSesionEPS" runat="server" OnAuthenticate="IniciarSesion2_Authenticate" TitleText="Iniciar Sesión" UserNameLabelText="NIT EPS"></asp:Login>

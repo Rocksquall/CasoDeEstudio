@@ -4,13 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        
-     <div>
+
+        <div>
             <asp:Panel ID="pnlConsulta" runat="server">
                 <asp:Label ID="Label1" runat="server" Text="Lista EPS"></asp:Label>
                 <asp:GridView ID="glvCentroMedico" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" OnRowCommand="glvCentroMedico_RowCommand" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
@@ -26,7 +26,7 @@
                         <asp:BoundField DataField="nivel_atencion_idnivel_atencion" HeaderText="Nivel de Atencion: " />
                         <asp:BoundField DataField="especialidad_idespecialidad" HeaderText="Especialidad: " />
                         <asp:BoundField DataField="eps_ideps" HeaderText="Eps: " />
-  
+
                         <asp:TemplateField HeaderText="Acciones">
                             <ItemTemplate>
                                 <asp:ImageButton Width="20px" ID="imgActualizar" runat="server" ImageUrl="~/resource/img/editar.png" CommandName="Actualizar" />
@@ -48,7 +48,7 @@
             <asp:Panel ID="pnlActualizar" runat="server" Height="237px">
                 <asp:Label ID="Label2" runat="server" Text="Actualizar Datos"></asp:Label>
                 <div>
-                     <div>
+                    <div>
                         <asp:Label ID="lblidcentro_medico" runat="server" Text="Id: "></asp:Label>
                         <asp:TextBox ID="txtidcentro_medico" runat="server" Enabled="False"></asp:TextBox>
                     </div>
@@ -62,7 +62,10 @@
                     </div>
                     <div>
                         <asp:Label ID="lblfoto_centro" runat="server" Text="Foto: "></asp:Label>
-                        <asp:TextBox ID="txtfoto_centro" runat="server"></asp:TextBox>
+                        <asp:FileUpload ID="fudloadImagen" runat="server" />
+                    </div>
+                    <div>
+                        <asp:Image ID="VisualizarImg" runat="server" CssClass="form-control" Height="215px" Style="margin-top: 11px" Width="297px" />
                     </div>
                     <div>
                         <asp:Label ID="lblhora_inicio" runat="server" Text="Hora Inicio: "></asp:Label>

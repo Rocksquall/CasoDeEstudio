@@ -24,24 +24,6 @@ namespace Clinica_Caso_Final
         protected global::System.Web.UI.HtmlControls.HtmlForm formAdministrador;
 
         /// <summary>
-        /// Control lblIdCentro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIdCentro;
-
-        /// <summary>
-        /// Control txtIdCentro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdCentro;
-
-        /// <summary>
         /// Control lblCentro.
         /// </summary>
         /// <remarks>
@@ -87,13 +69,22 @@ namespace Clinica_Caso_Final
         protected global::System.Web.UI.WebControls.Label lblFotoCentro;
 
         /// <summary>
-        /// Control txtFotoCentro.
+        /// Control fudloadImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFotoCentro;
+        protected global::System.Web.UI.WebControls.FileUpload fudloadImagen;
+
+        /// <summary>
+        /// Control RequiredFieldValidator7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
         /// Control lblHoraInicioCentro.
