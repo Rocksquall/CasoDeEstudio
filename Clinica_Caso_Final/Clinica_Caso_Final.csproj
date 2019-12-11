@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\registrarEPS.aspx" />
+    <Content Include="Administrador\reportes.aspx" />
+    <Content Include="Administrador\reportes1.aspx" />
     <Content Include="EPS\actualizarEpsCentroMedico.aspx" />
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
@@ -107,6 +111,20 @@
     </Compile>
     <Compile Include="Administrador\registrarEPS.aspx.designer.cs">
       <DependentUpon>registrarEPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\reportes.aspx.cs">
+      <DependentUpon>reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\reportes.aspx.designer.cs">
+      <DependentUpon>reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\reportes1.aspx.cs">
+      <DependentUpon>reportes1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\reportes1.aspx.designer.cs">
+      <DependentUpon>reportes1.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\actualizarEpsCentroMedico.aspx.cs">
       <DependentUpon>actualizarEpsCentroMedico.aspx</DependentUpon>

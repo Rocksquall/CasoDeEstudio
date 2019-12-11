@@ -35,6 +35,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,9 +51,11 @@
     <Compile Include="ClsEspecialidad.cs" />
     <Compile Include="ClsListas.cs" />
     <Compile Include="ClsLogin.cs" />
+    <Compile Include="ClsReportes.cs" />
     <Compile Include="ClsRol.cs" />
     <Compile Include="ClsUsuario.cs" />
     <Compile Include="ClsUsuarioCentroMedico.cs" />
+    <Compile Include="ClsUtilidad.cs" />
     <Compile Include="Orm.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
