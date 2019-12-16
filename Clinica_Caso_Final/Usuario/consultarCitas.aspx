@@ -13,8 +13,10 @@
             <asp:Label ID="Label1" runat="server" Text="Listado Citas"></asp:Label>
             <asp:GridView ID="gdvCita" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
                 <Columns>
-                    <asp:BoundField DataField="idEspecialidad" HeaderText="ID" />
-                    <asp:BoundField DataField="especialidad_eps" HeaderText="Especialidad" />
+                    <asp:BoundField DataField="idcita" HeaderText="ID" />
+                    <asp:BoundField DataField="fecha_cita" HeaderText="fecha" />
+                    <asp:BoundField DataField="usuario_idusuario" HeaderText="id Usuario" />
+                    <asp:BoundField DataField="centro_medico_idcentro_medico" HeaderText="id centro medico" />
 
 
                     <asp:TemplateField HeaderText="Acciones">

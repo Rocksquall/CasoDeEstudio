@@ -69,9 +69,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\consultarCalificacion.aspx" />
     <Content Include="Administrador\registrarEPS.aspx" />
     <Content Include="Administrador\reportes.aspx" />
-    <Content Include="Administrador\reportes1.aspx" />
     <Content Include="EPS\actualizarEpsCentroMedico.aspx" />
     <Content Include="EPS\actualizarEpsEspecialidad.aspx" />
     <Content Include="EPS\indexEps.aspx" />
@@ -105,6 +105,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\consultarCalificacion.aspx.cs">
+      <DependentUpon>consultarCalificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\consultarCalificacion.aspx.designer.cs">
+      <DependentUpon>consultarCalificacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\registrarEPS.aspx.cs">
       <DependentUpon>registrarEPS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,13 +125,6 @@
     </Compile>
     <Compile Include="Administrador\reportes.aspx.designer.cs">
       <DependentUpon>reportes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\reportes1.aspx.cs">
-      <DependentUpon>reportes1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Administrador\reportes1.aspx.designer.cs">
-      <DependentUpon>reportes1.aspx</DependentUpon>
     </Compile>
     <Compile Include="EPS\actualizarEpsCentroMedico.aspx.cs">
       <DependentUpon>actualizarEpsCentroMedico.aspx</DependentUpon>

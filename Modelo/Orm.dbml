@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="casodeestudio" Class="OrmDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A7C28SI\SQLEXPRESS;Initial Catalog=casodeestudio;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="casodeestudioConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="casodeestudio.usuario" Member="usuario">
+    <Type Name="usuario">
+      <Column Name="idusuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="cedula_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="correo_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="clave_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="rol_idrol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="usuario_cita" Member="cita" ThisKey="idusuario" OtherKey="usuario_idusuario" Type="cita" />
+      <Association Name="usuario_usuario_centro_medico" Member="usuario_centro_medico" ThisKey="idusuario" OtherKey="usuario_idusuario" Type="usuario_centro_medico" />
+      <Association Name="rol_usuario" Member="rol" ThisKey="rol_idrol" OtherKey="idrol" Type="rol" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="casodeestudio.centro_medico" Member="centro_medico">
     <Type Name="centro_medico">
       <Column Name="idcentro_medico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -23,9 +38,12 @@
   <Table Name="casodeestudio.cita" Member="cita">
     <Type Name="cita">
       <Column Name="idcita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="fecha_cita" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cita" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_idusuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="centro_medico_idcentro_medico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="centro_medico_cita" Member="centro_medico" ThisKey="centro_medico_idcentro_medico" OtherKey="idcentro_medico" Type="centro_medico" IsForeignKey="true" />
+      <Association Name="usuario_cita" Member="usuario" ThisKey="usuario_idusuario" OtherKey="idusuario" Type="usuario" IsForeignKey="true" />
+      <Association Name="usuario1_cita" Member="usuario1" ThisKey="usuario_idusuario" OtherKey="idusuario" Type="usuario1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="casodeestudio.eps" Member="eps">
@@ -58,10 +76,11 @@
       <Column Name="idrol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="rol1" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Association Name="rol_usuario" Member="usuario" ThisKey="idrol" OtherKey="rol_idrol" Type="usuario" />
+      <Association Name="rol_usuario1" Member="usuario1" ThisKey="idrol" OtherKey="rol_idrol" Type="usuario1" />
     </Type>
   </Table>
-  <Table Name="casodeestudio.usuario" Member="usuario">
-    <Type Name="usuario">
+  <Table Name="casodeestudio.usuario" Member="usuario1">
+    <Type Name="usuario1">
       <Column Name="idusuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nombre_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="apellido_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
@@ -70,8 +89,9 @@
       <Column Name="correo_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="clave_u" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="rol_idrol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="usuario_usuario_centro_medico" Member="usuario_centro_medico" ThisKey="idusuario" OtherKey="usuario_idusuario" Type="usuario_centro_medico" />
-      <Association Name="rol_usuario" Member="rol" ThisKey="rol_idrol" OtherKey="idrol" Type="rol" IsForeignKey="true" />
+      <Association Name="usuario1_cita" Member="cita" ThisKey="idusuario" OtherKey="usuario_idusuario" Type="cita" />
+      <Association Name="usuario1_usuario_centro_medico" Member="usuario_centro_medico" ThisKey="idusuario" OtherKey="usuario_idusuario" Type="usuario_centro_medico" />
+      <Association Name="rol_usuario1" Member="rol" ThisKey="rol_idrol" OtherKey="idrol" Type="rol" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="casodeestudio.usuario_centro_medico" Member="usuario_centro_medico">
@@ -82,6 +102,7 @@
       <Column Name="usuario_idusuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="centro_medico_usuario_centro_medico" Member="centro_medico" ThisKey="centro_medico_idcentro_medico" OtherKey="idcentro_medico" Type="centro_medico" IsForeignKey="true" />
       <Association Name="usuario_usuario_centro_medico" Member="usuario" ThisKey="usuario_idusuario" OtherKey="idusuario" Type="usuario" IsForeignKey="true" />
+      <Association Name="usuario1_usuario_centro_medico" Member="usuario1" ThisKey="usuario_idusuario" OtherKey="idusuario" Type="usuario1" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

@@ -14,7 +14,7 @@
             <a href="editarEPS.aspx">Consultar y editar EPS</a>
             <a href="../EPS/registroEPSCentro.aspx">Registrar Centro Medico</a>
             <a href="../EPS/actualizarEpsCentroMedico.aspx">Consultar y editar Centro Medico</a>
-            <a href="../EPS/actualizarEpsCentroMedico.aspx">Calificaciones</a>
+            <a href="reportes.aspx">reportes</a>
         </div>
     </form>
 </body>

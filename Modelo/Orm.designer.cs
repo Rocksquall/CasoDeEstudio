@@ -30,6 +30,9 @@ namespace Modelo
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnCreated();
+    partial void Insertusuario(usuario instance);
+    partial void Updateusuario(usuario instance);
+    partial void Deleteusuario(usuario instance);
     partial void Insertcentro_medico(centro_medico instance);
     partial void Updatecentro_medico(centro_medico instance);
     partial void Deletecentro_medico(centro_medico instance);
@@ -48,9 +51,9 @@ namespace Modelo
     partial void Insertrol(rol instance);
     partial void Updaterol(rol instance);
     partial void Deleterol(rol instance);
-    partial void Insertusuario(usuario instance);
-    partial void Updateusuario(usuario instance);
-    partial void Deleteusuario(usuario instance);
+    partial void Insertusuario1(usuario1 instance);
+    partial void Updateusuario1(usuario1 instance);
+    partial void Deleteusuario1(usuario1 instance);
     partial void Insertusuario_centro_medico(usuario_centro_medico instance);
     partial void Updateusuario_centro_medico(usuario_centro_medico instance);
     partial void Deleteusuario_centro_medico(usuario_centro_medico instance);
@@ -84,6 +87,14 @@ namespace Modelo
 				base(connection, mappingSource)
 		{
 			OnCreated();
+		}
+		
+		public System.Data.Linq.Table<usuario> usuario
+		{
+			get
+			{
+				return this.GetTable<usuario>();
+			}
 		}
 		
 		public System.Data.Linq.Table<centro_medico> centro_medico
@@ -134,11 +145,11 @@ namespace Modelo
 			}
 		}
 		
-		public System.Data.Linq.Table<usuario> usuario
+		public System.Data.Linq.Table<usuario1> usuario1
 		{
 			get
 			{
-				return this.GetTable<usuario>();
+				return this.GetTable<usuario1>();
 			}
 		}
 		
@@ -148,6 +159,333 @@ namespace Modelo
 			{
 				return this.GetTable<usuario_centro_medico>();
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="casodeestudio.usuario")]
+	public partial class usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idusuario;
+		
+		private string _nombre_u;
+		
+		private string _apellido_u;
+		
+		private string _cedula_u;
+		
+		private string _telefono_u;
+		
+		private string _correo_u;
+		
+		private string _clave_u;
+		
+		private int _rol_idrol;
+		
+		private EntitySet<cita> _cita;
+		
+		private EntitySet<usuario_centro_medico> _usuario_centro_medico;
+		
+		private EntityRef<rol> _rol;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidusuarioChanging(int value);
+    partial void OnidusuarioChanged();
+    partial void Onnombre_uChanging(string value);
+    partial void Onnombre_uChanged();
+    partial void Onapellido_uChanging(string value);
+    partial void Onapellido_uChanged();
+    partial void Oncedula_uChanging(string value);
+    partial void Oncedula_uChanged();
+    partial void Ontelefono_uChanging(string value);
+    partial void Ontelefono_uChanged();
+    partial void Oncorreo_uChanging(string value);
+    partial void Oncorreo_uChanged();
+    partial void Onclave_uChanging(string value);
+    partial void Onclave_uChanged();
+    partial void Onrol_idrolChanging(int value);
+    partial void Onrol_idrolChanged();
+    #endregion
+		
+		public usuario()
+		{
+			this._cita = new EntitySet<cita>(new Action<cita>(this.attach_cita), new Action<cita>(this.detach_cita));
+			this._usuario_centro_medico = new EntitySet<usuario_centro_medico>(new Action<usuario_centro_medico>(this.attach_usuario_centro_medico), new Action<usuario_centro_medico>(this.detach_usuario_centro_medico));
+			this._rol = default(EntityRef<rol>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idusuario", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idusuario
+		{
+			get
+			{
+				return this._idusuario;
+			}
+			set
+			{
+				if ((this._idusuario != value))
+				{
+					this.OnidusuarioChanging(value);
+					this.SendPropertyChanging();
+					this._idusuario = value;
+					this.SendPropertyChanged("idusuario");
+					this.OnidusuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre_u", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string nombre_u
+		{
+			get
+			{
+				return this._nombre_u;
+			}
+			set
+			{
+				if ((this._nombre_u != value))
+				{
+					this.Onnombre_uChanging(value);
+					this.SendPropertyChanging();
+					this._nombre_u = value;
+					this.SendPropertyChanged("nombre_u");
+					this.Onnombre_uChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_apellido_u", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string apellido_u
+		{
+			get
+			{
+				return this._apellido_u;
+			}
+			set
+			{
+				if ((this._apellido_u != value))
+				{
+					this.Onapellido_uChanging(value);
+					this.SendPropertyChanging();
+					this._apellido_u = value;
+					this.SendPropertyChanged("apellido_u");
+					this.Onapellido_uChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cedula_u", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string cedula_u
+		{
+			get
+			{
+				return this._cedula_u;
+			}
+			set
+			{
+				if ((this._cedula_u != value))
+				{
+					this.Oncedula_uChanging(value);
+					this.SendPropertyChanging();
+					this._cedula_u = value;
+					this.SendPropertyChanged("cedula_u");
+					this.Oncedula_uChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_telefono_u", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string telefono_u
+		{
+			get
+			{
+				return this._telefono_u;
+			}
+			set
+			{
+				if ((this._telefono_u != value))
+				{
+					this.Ontelefono_uChanging(value);
+					this.SendPropertyChanging();
+					this._telefono_u = value;
+					this.SendPropertyChanged("telefono_u");
+					this.Ontelefono_uChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_correo_u", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string correo_u
+		{
+			get
+			{
+				return this._correo_u;
+			}
+			set
+			{
+				if ((this._correo_u != value))
+				{
+					this.Oncorreo_uChanging(value);
+					this.SendPropertyChanging();
+					this._correo_u = value;
+					this.SendPropertyChanged("correo_u");
+					this.Oncorreo_uChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clave_u", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string clave_u
+		{
+			get
+			{
+				return this._clave_u;
+			}
+			set
+			{
+				if ((this._clave_u != value))
+				{
+					this.Onclave_uChanging(value);
+					this.SendPropertyChanging();
+					this._clave_u = value;
+					this.SendPropertyChanged("clave_u");
+					this.Onclave_uChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rol_idrol", DbType="Int NOT NULL")]
+		public int rol_idrol
+		{
+			get
+			{
+				return this._rol_idrol;
+			}
+			set
+			{
+				if ((this._rol_idrol != value))
+				{
+					if (this._rol.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onrol_idrolChanging(value);
+					this.SendPropertyChanging();
+					this._rol_idrol = value;
+					this.SendPropertyChanged("rol_idrol");
+					this.Onrol_idrolChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario_cita", Storage="_cita", ThisKey="idusuario", OtherKey="usuario_idusuario")]
+		public EntitySet<cita> cita
+		{
+			get
+			{
+				return this._cita;
+			}
+			set
+			{
+				this._cita.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario_usuario_centro_medico", Storage="_usuario_centro_medico", ThisKey="idusuario", OtherKey="usuario_idusuario")]
+		public EntitySet<usuario_centro_medico> usuario_centro_medico
+		{
+			get
+			{
+				return this._usuario_centro_medico;
+			}
+			set
+			{
+				this._usuario_centro_medico.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario", Storage="_rol", ThisKey="rol_idrol", OtherKey="idrol", IsForeignKey=true)]
+		public rol rol
+		{
+			get
+			{
+				return this._rol.Entity;
+			}
+			set
+			{
+				rol previousValue = this._rol.Entity;
+				if (((previousValue != value) 
+							|| (this._rol.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._rol.Entity = null;
+						previousValue.usuario.Remove(this);
+					}
+					this._rol.Entity = value;
+					if ((value != null))
+					{
+						value.usuario.Add(this);
+						this._rol_idrol = value.idrol;
+					}
+					else
+					{
+						this._rol_idrol = default(int);
+					}
+					this.SendPropertyChanged("rol");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_cita(cita entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuario = this;
+		}
+		
+		private void detach_cita(cita entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuario = null;
+		}
+		
+		private void attach_usuario_centro_medico(usuario_centro_medico entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuario = this;
+		}
+		
+		private void detach_usuario_centro_medico(usuario_centro_medico entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuario = null;
 		}
 	}
 	
@@ -642,9 +980,15 @@ namespace Modelo
 		
 		private System.DateTime _fecha_cita;
 		
+		private int _usuario_idusuario;
+		
 		private int _centro_medico_idcentro_medico;
 		
 		private EntityRef<centro_medico> _centro_medico;
+		
+		private EntityRef<usuario> _usuario;
+		
+		private EntityRef<usuario1> _usuario1;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -654,6 +998,8 @@ namespace Modelo
     partial void OnidcitaChanged();
     partial void Onfecha_citaChanging(System.DateTime value);
     partial void Onfecha_citaChanged();
+    partial void Onusuario_idusuarioChanging(int value);
+    partial void Onusuario_idusuarioChanged();
     partial void Oncentro_medico_idcentro_medicoChanging(int value);
     partial void Oncentro_medico_idcentro_medicoChanged();
     #endregion
@@ -661,6 +1007,8 @@ namespace Modelo
 		public cita()
 		{
 			this._centro_medico = default(EntityRef<centro_medico>);
+			this._usuario = default(EntityRef<usuario>);
+			this._usuario1 = default(EntityRef<usuario1>);
 			OnCreated();
 		}
 		
@@ -684,7 +1032,7 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha_cita", DbType="Date NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha_cita", DbType="DateTime NOT NULL")]
 		public System.DateTime fecha_cita
 		{
 			get
@@ -700,6 +1048,30 @@ namespace Modelo
 					this._fecha_cita = value;
 					this.SendPropertyChanged("fecha_cita");
 					this.Onfecha_citaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario_idusuario", DbType="Int NOT NULL")]
+		public int usuario_idusuario
+		{
+			get
+			{
+				return this._usuario_idusuario;
+			}
+			set
+			{
+				if ((this._usuario_idusuario != value))
+				{
+					if ((this._usuario.HasLoadedOrAssignedValue || this._usuario1.HasLoadedOrAssignedValue))
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onusuario_idusuarioChanging(value);
+					this.SendPropertyChanging();
+					this._usuario_idusuario = value;
+					this.SendPropertyChanged("usuario_idusuario");
+					this.Onusuario_idusuarioChanged();
 				}
 			}
 		}
@@ -758,6 +1130,74 @@ namespace Modelo
 						this._centro_medico_idcentro_medico = default(int);
 					}
 					this.SendPropertyChanged("centro_medico");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario_cita", Storage="_usuario", ThisKey="usuario_idusuario", OtherKey="idusuario", IsForeignKey=true)]
+		public usuario usuario
+		{
+			get
+			{
+				return this._usuario.Entity;
+			}
+			set
+			{
+				usuario previousValue = this._usuario.Entity;
+				if (((previousValue != value) 
+							|| (this._usuario.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._usuario.Entity = null;
+						previousValue.cita.Remove(this);
+					}
+					this._usuario.Entity = value;
+					if ((value != null))
+					{
+						value.cita.Add(this);
+						this._usuario_idusuario = value.idusuario;
+					}
+					else
+					{
+						this._usuario_idusuario = default(int);
+					}
+					this.SendPropertyChanged("usuario");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario1_cita", Storage="_usuario1", ThisKey="usuario_idusuario", OtherKey="idusuario", IsForeignKey=true)]
+		public usuario1 usuario1
+		{
+			get
+			{
+				return this._usuario1.Entity;
+			}
+			set
+			{
+				usuario1 previousValue = this._usuario1.Entity;
+				if (((previousValue != value) 
+							|| (this._usuario1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._usuario1.Entity = null;
+						previousValue.cita.Remove(this);
+					}
+					this._usuario1.Entity = value;
+					if ((value != null))
+					{
+						value.cita.Add(this);
+						this._usuario_idusuario = value.idusuario;
+					}
+					else
+					{
+						this._usuario_idusuario = default(int);
+					}
+					this.SendPropertyChanged("usuario1");
 				}
 			}
 		}
@@ -1233,6 +1673,8 @@ namespace Modelo
 		
 		private EntitySet<usuario> _usuario;
 		
+		private EntitySet<usuario1> _usuario1;
+		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1246,6 +1688,7 @@ namespace Modelo
 		public rol()
 		{
 			this._usuario = new EntitySet<usuario>(new Action<usuario>(this.attach_usuario), new Action<usuario>(this.detach_usuario));
+			this._usuario1 = new EntitySet<usuario1>(new Action<usuario1>(this.attach_usuario1), new Action<usuario1>(this.detach_usuario1));
 			OnCreated();
 		}
 		
@@ -1302,6 +1745,19 @@ namespace Modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario1", Storage="_usuario1", ThisKey="idrol", OtherKey="rol_idrol")]
+		public EntitySet<usuario1> usuario1
+		{
+			get
+			{
+				return this._usuario1;
+			}
+			set
+			{
+				this._usuario1.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1333,10 +1789,22 @@ namespace Modelo
 			this.SendPropertyChanging();
 			entity.rol = null;
 		}
+		
+		private void attach_usuario1(usuario1 entity)
+		{
+			this.SendPropertyChanging();
+			entity.rol = this;
+		}
+		
+		private void detach_usuario1(usuario1 entity)
+		{
+			this.SendPropertyChanging();
+			entity.rol = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="casodeestudio.usuario")]
-	public partial class usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class usuario1 : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1356,6 +1824,8 @@ namespace Modelo
 		private string _clave_u;
 		
 		private int _rol_idrol;
+		
+		private EntitySet<cita> _cita;
 		
 		private EntitySet<usuario_centro_medico> _usuario_centro_medico;
 		
@@ -1383,8 +1853,9 @@ namespace Modelo
     partial void Onrol_idrolChanged();
     #endregion
 		
-		public usuario()
+		public usuario1()
 		{
+			this._cita = new EntitySet<cita>(new Action<cita>(this.attach_cita), new Action<cita>(this.detach_cita));
 			this._usuario_centro_medico = new EntitySet<usuario_centro_medico>(new Action<usuario_centro_medico>(this.attach_usuario_centro_medico), new Action<usuario_centro_medico>(this.detach_usuario_centro_medico));
 			this._rol = default(EntityRef<rol>);
 			OnCreated();
@@ -1554,7 +2025,20 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario_usuario_centro_medico", Storage="_usuario_centro_medico", ThisKey="idusuario", OtherKey="usuario_idusuario")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario1_cita", Storage="_cita", ThisKey="idusuario", OtherKey="usuario_idusuario")]
+		public EntitySet<cita> cita
+		{
+			get
+			{
+				return this._cita;
+			}
+			set
+			{
+				this._cita.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario1_usuario_centro_medico", Storage="_usuario_centro_medico", ThisKey="idusuario", OtherKey="usuario_idusuario")]
 		public EntitySet<usuario_centro_medico> usuario_centro_medico
 		{
 			get
@@ -1567,7 +2051,7 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario", Storage="_rol", ThisKey="rol_idrol", OtherKey="idrol", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario1", Storage="_rol", ThisKey="rol_idrol", OtherKey="idrol", IsForeignKey=true)]
 		public rol rol
 		{
 			get
@@ -1584,12 +2068,12 @@ namespace Modelo
 					if ((previousValue != null))
 					{
 						this._rol.Entity = null;
-						previousValue.usuario.Remove(this);
+						previousValue.usuario1.Remove(this);
 					}
 					this._rol.Entity = value;
 					if ((value != null))
 					{
-						value.usuario.Add(this);
+						value.usuario1.Add(this);
 						this._rol_idrol = value.idrol;
 					}
 					else
@@ -1621,16 +2105,28 @@ namespace Modelo
 			}
 		}
 		
+		private void attach_cita(cita entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuario1 = this;
+		}
+		
+		private void detach_cita(cita entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuario1 = null;
+		}
+		
 		private void attach_usuario_centro_medico(usuario_centro_medico entity)
 		{
 			this.SendPropertyChanging();
-			entity.usuario = this;
+			entity.usuario1 = this;
 		}
 		
 		private void detach_usuario_centro_medico(usuario_centro_medico entity)
 		{
 			this.SendPropertyChanging();
-			entity.usuario = null;
+			entity.usuario1 = null;
 		}
 	}
 	
@@ -1652,6 +2148,8 @@ namespace Modelo
 		
 		private EntityRef<usuario> _usuario;
 		
+		private EntityRef<usuario1> _usuario1;
+		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1670,6 +2168,7 @@ namespace Modelo
 		{
 			this._centro_medico = default(EntityRef<centro_medico>);
 			this._usuario = default(EntityRef<usuario>);
+			this._usuario1 = default(EntityRef<usuario1>);
 			OnCreated();
 		}
 		
@@ -1748,7 +2247,7 @@ namespace Modelo
 			{
 				if ((this._usuario_idusuario != value))
 				{
-					if (this._usuario.HasLoadedOrAssignedValue)
+					if ((this._usuario.HasLoadedOrAssignedValue || this._usuario1.HasLoadedOrAssignedValue))
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -1825,6 +2324,40 @@ namespace Modelo
 						this._usuario_idusuario = default(int);
 					}
 					this.SendPropertyChanged("usuario");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuario1_usuario_centro_medico", Storage="_usuario1", ThisKey="usuario_idusuario", OtherKey="idusuario", IsForeignKey=true)]
+		public usuario1 usuario1
+		{
+			get
+			{
+				return this._usuario1.Entity;
+			}
+			set
+			{
+				usuario1 previousValue = this._usuario1.Entity;
+				if (((previousValue != value) 
+							|| (this._usuario1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._usuario1.Entity = null;
+						previousValue.usuario_centro_medico.Remove(this);
+					}
+					this._usuario1.Entity = value;
+					if ((value != null))
+					{
+						value.usuario_centro_medico.Add(this);
+						this._usuario_idusuario = value.idusuario;
+					}
+					else
+					{
+						this._usuario_idusuario = default(int);
+					}
+					this.SendPropertyChanged("usuario1");
 				}
 			}
 		}

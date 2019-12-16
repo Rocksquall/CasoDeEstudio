@@ -10,11 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
-
             <asp:Label ID="lblLogueado" runat="server"></asp:Label>
-
-
         </div>
         <div>
             <div>
@@ -37,7 +33,7 @@
                 <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtTelefono" ErrorMessage="Debe ingresar su número de  Telefono" ForeColor="#CC0066"></asp:RequiredFieldValidator>
             </div>
-              <div>
+            <div>
                 <asp:Label ID="lblCorreo" runat="server" Text="Correo: "></asp:Label>
                 <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar su Correo " ForeColor="#CC0066"></asp:RequiredFieldValidator>

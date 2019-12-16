@@ -22,7 +22,11 @@ namespace Clinica_Caso_Final.EPS
             cita citadto = new cita();
             ClsCita citadao = new ClsCita();
 
-            citadto.fecha_cita = DateTime.Parse(txtFechaCita.Text, new CultureInfo("es-ES"));
+
+            citadto.fecha_cita = DateTime.Parse(txtFechaCita.Text);
+           
+            citadto.centro_medico_idcentro_medico = int.Parse(ddlCentroMedico.SelectedValue.ToString());
+            citadto.usuario_idusuario = int.Parse(txtusuario.Text);
             citadao.registrarCita(citadto);
         }
     }

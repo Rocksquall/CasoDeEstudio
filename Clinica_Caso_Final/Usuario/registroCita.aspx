@@ -25,6 +25,10 @@
                     <asp:DropDownList ID="ddlCentroMedico" runat="server">
                     </asp:DropDownList>
                 </div>
+                 <div>
+                    <asp:Label ID="lblusuario" runat="server" Text="Usuario: "></asp:Label>
+                    <asp:TextBox ID="txtusuario" runat="server"></asp:TextBox>
+                </div>
                 <div>
                     <asp:Button ID="btnRegistrarCita" runat="server" Text="Registrar" OnClick="BtnRegistrarCita_Click" />
                 </div>
