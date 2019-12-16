@@ -13,6 +13,7 @@
             <a href="registroCita.aspx">Registrar Cita</a>
             <a href="consultarLugarCercano.aspx">Consultar lugar cercano</a>
             <a href="consultarCitas.aspx">Listado de Citas</a>
+            <a href="calificarCentroMedico.aspx">Calificar Centro Medico</a>
         </div>
     </form>
 </body>

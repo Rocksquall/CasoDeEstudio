@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github",
     "\\Clinica_Caso_Final",
     "\\Clinica_Caso_Final\\Usuario"
   ],
-  "SelectedNode": "\\Clinica_Caso_Final.sln",
+  "SelectedNode": "\\Clinica_Caso_Final\\Usuario\\crudUsuario.aspx",
   "PreviewInSolutionExplorer": false
 }

@@ -57,7 +57,7 @@ namespace Modelo
     #endregion
 		
 		public OrmDataContext() : 
-				base(global::Modelo.Properties.Settings.Default.casodeestudioConnectionString2, mappingSource)
+				base(global::Modelo.Properties.Settings.Default.casodeestudioConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -640,7 +640,7 @@ namespace Modelo
 		
 		private int _idcita;
 		
-		private string _fecha_cita;
+		private System.DateTime _fecha_cita;
 		
 		private int _centro_medico_idcentro_medico;
 		
@@ -652,7 +652,7 @@ namespace Modelo
     partial void OnCreated();
     partial void OnidcitaChanging(int value);
     partial void OnidcitaChanged();
-    partial void Onfecha_citaChanging(string value);
+    partial void Onfecha_citaChanging(System.DateTime value);
     partial void Onfecha_citaChanged();
     partial void Oncentro_medico_idcentro_medicoChanging(int value);
     partial void Oncentro_medico_idcentro_medicoChanged();
@@ -684,8 +684,8 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha_cita", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string fecha_cita
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha_cita", DbType="Date NOT NULL")]
+		public System.DateTime fecha_cita
 		{
 			get
 			{

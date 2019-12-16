@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
 using Modelo;
 
 namespace Clinica_Caso_Final.EPS
@@ -20,7 +21,8 @@ namespace Clinica_Caso_Final.EPS
         {
             cita citadto = new cita();
             ClsCita citadao = new ClsCita();
-            citadto.fecha_cita = txtFechaCita.Text;
+
+            citadto.fecha_cita = DateTime.Parse(txtFechaCita.Text, new CultureInfo("es-ES"));
             citadao.registrarCita(citadto);
         }
     }

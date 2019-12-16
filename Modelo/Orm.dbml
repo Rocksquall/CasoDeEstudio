@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="casodeestudio" Class="OrmDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-ROCKSQU\SQLEXPRESS;Initial Catalog=casodeestudio;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="casodeestudioConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-A7C28SI\SQLEXPRESS;Initial Catalog=casodeestudio;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="casodeestudioConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="casodeestudio.centro_medico" Member="centro_medico">
     <Type Name="centro_medico">
       <Column Name="idcentro_medico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -23,7 +23,7 @@
   <Table Name="casodeestudio.cita" Member="cita">
     <Type Name="cita">
       <Column Name="idcita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="fecha_cita" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cita" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="centro_medico_idcentro_medico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="centro_medico_cita" Member="centro_medico" ThisKey="centro_medico_idcentro_medico" OtherKey="idcentro_medico" Type="centro_medico" IsForeignKey="true" />
     </Type>
